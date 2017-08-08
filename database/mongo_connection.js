@@ -1,6 +1,7 @@
 const config = require('../configs/database.json');
 const client = require('mongodb').MongoClient();
 
+/** function to connect to mongodb **/
 function connect() {
     return new Promise((resolve, reject) => {
         client.connect(config.mongodb_uri, (err, database) => {
