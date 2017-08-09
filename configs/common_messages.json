@@ -23,5 +23,10 @@
     "success" : false,
     "message" : "Nomor Telepon tidak terdaftar atau password tidak sesuai",
     "code" : "003"
+  },
+  "username_not_valid" : {
+    "success" : false,
+    "message" : "Username tidak terdaftar atau password tidak sesuai",
+    "code" : "004"
   }
 }

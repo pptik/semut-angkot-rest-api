@@ -14,46 +14,35 @@ router.post('/login', async(req, res) => {
     else {
         let isEmail = validator.validateEmail(entity);
         let isNumber = validator.validatePhone(entity);
-        if(isEmail){
-            try {
-                let profile = await userModel.findEmail(entity);
-                if(profile.length <= 0){
-                    res.status(200).send(commonMessage.email_not_valid);
-                }else {
-                    profile = profile[0];
-                    if(profile['Password'] === md5(password)){
-                        await userModel.initSession(profile['ID']);
-                        let session = await userModel.getSession(profile['ID']);
-                        delete profile['Password'];
-                        profile['SessionID'] = session;
-                        res.status(200).send(profile);
-                    }else res.status(200).send(commonMessage.email_not_valid);
-                }
-            }catch (err){
-                console.log(err);
-                res.status(200).send(commonMessage.service_not_responding);
+        try {
+            let profile;
+            let validMsg;
+            if(isEmail){
+                profile = await userModel.findEmail(entity);
+                validMsg = commonMessage.email_not_valid;
+            }else if(isNumber){
+                profile = await userModel.findPhoneNumber(entity);
+                validMsg = commonMessage.phone_not_valid;
+            }else {
+                profile = await userModel.findUserName(entity);
+                validMsg = commonMessage.username_not_valid;
             }
-        }else if(isNumber){
-            try {
-                let profile = await userModel.findPhoneNumber(entity);
-                if(profile.length <= 0){
-                    res.status(200).send(commonMessage.phone_not_valid);
-                }else {
-                    profile = profile[0];
-                    if(profile['Password'] === md5(password)){
-                        await userModel.initSession(profile['ID']);
-                        let session = await userModel.getSession(profile['ID']);
-                        delete profile['Password'];
-                        profile['SessionID'] = session;
-                        res.status(200).send(profile);
-                    }else res.status(200).send(commonMessage.phone_not_valid);
-                }
-            }catch (err){
-                console.log(err);
-                res.status(200).send(commonMessage.service_not_responding);
+
+            if(profile.length <= 0){
+                res.status(200).send(validMsg);
+            }else {
+                profile = profile[0];
+                if(profile['Password'] === md5(password)){
+                    await userModel.initSession(profile['ID']);
+                    let session = await userModel.getSession(profile['ID']);
+                    delete profile['Password'];
+                    profile['SessionID'] = session;
+                    res.status(200).send(profile);
+                }else res.status(200).send(validMsg);
             }
-        }else {
-            res.status(200).send("is username");
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMessage.service_not_responding);
         }
     }
 });
