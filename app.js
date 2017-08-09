@@ -7,9 +7,12 @@ const bodyParser = require('body-parser');
 const database = require('./database/mongo_connection');
 const debug = require('debug')('semut-svc:server');
 const http = require('http');
+const commonMsg = require('./configs/common_messages.json');
 let app = express();
 
 /** setup express **/
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 /** get mongodb connection pool* */
 database.connect().then(db =>{
     /** if error **/
-    app.use((err, req, res) => {
-        res.status(200).send({success: false, message: "server not responding, cause "+err});
+    app.use((err, req, res, next) => {
+        res.status(200).send(commonMsg.service_not_responding);
     });
     /** init server **/
     let port = normalizePort(process.env.PORT || '3030');
@@ -72,7 +75,7 @@ database.connect().then(db =>{
 
     /** if route not found**/
     app.use((req, res) => {
-        res.status(200).send({success: false, message: "service not found"});
+        res.status(200).send(commonMsg.routes_not_found);
     });
 }).catch(err=>{
     console.log(err);

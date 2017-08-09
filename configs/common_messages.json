@@ -1,0 +1,17 @@
+{
+  "body_body_empty" : {
+    "success" : false,
+    "message" : "Parameter tidak lengkap",
+    "code" : "001"
+  },
+  "routes_not_found" : {
+    "success" : false,
+    "message" : "Service tidak ditemukan",
+    "code" : "100"
+  },
+  "service_not_responding" : {
+    "success" : false,
+    "message" : "Server tidak merespon",
+    "code" : "500"
+  }
+}

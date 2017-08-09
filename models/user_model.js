@@ -1,7 +1,7 @@
 const app = require('../app');
 const moment = require('moment');
 let database = app.db;
-let userCollection = database.collation('tb_user');
+let userCollection = database.collection('tb_user');
 let sessionCollection = database.collection('tb_session');
 var autoIncrement = require("mongodb-autoincrement");
 
