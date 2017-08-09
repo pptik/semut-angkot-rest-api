@@ -4,9 +4,6 @@
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs/common_messages.json" afterPath="$PROJECT_DIR$/configs/common_messages.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model.js" afterPath="$PROJECT_DIR$/models/user_model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="320">
+              <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -44,8 +41,8 @@
       <file leaf-file-name="common_messages.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/common_messages.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+            <state relative-caret-position="420">
+              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -94,8 +91,8 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/utilities/string_validator.js" />
-        <option value="$PROJECT_DIR$/configs/common_messages.json" />
         <option value="$PROJECT_DIR$/models/user_model.js" />
+        <option value="$PROJECT_DIR$/configs/common_messages.json" />
         <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
     </option>
@@ -206,7 +203,7 @@
       <updated>1502164713140</updated>
       <workItem from="1502164714367" duration="348000" />
       <workItem from="1502165075291" duration="8951000" />
-      <workItem from="1502251338768" duration="10289000" />
+      <workItem from="1502251338768" duration="10560000" />
     </task>
     <task id="LOCAL-00001" summary="remove view engine">
       <created>1502165528808</created>
@@ -264,11 +261,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502263879785</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="login by email ok">
+      <created>1502265981138</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1502265981138</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19588000" />
+    <option name="totallyTimeSpent" value="19859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -327,7 +331,8 @@
     <MESSAGE value="export model" />
     <MESSAGE value="common response" />
     <MESSAGE value="test email &amp; number validator" />
-    <option name="LAST_COMMIT_MESSAGE" value="test email &amp; number validator" />
+    <MESSAGE value="login by email ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="login by email ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -404,14 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/common_messages.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/user_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1855">
@@ -420,10 +417,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/configs/common_messages.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="320">
+          <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
           <folding />
         </state>
       </provider>
