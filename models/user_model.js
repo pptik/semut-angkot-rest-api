@@ -238,14 +238,14 @@ insertUser = (query) => {
 /** insert user angkot**/
 insertUserAngkot = (query) => {
     return new Promise((resolve, reject) =>{
-        let email = (query.Email !== undefined) ? query['Email'] : 'N/A';
-        let phonenumber = (query.Phonenumber !== undefined) ? query['Phonenumber'] : 'N/A';
+        let email = query['email'];
+        let phonenumber = query['phonenumber'];
         let gender = 3;
         let birthday = 'N/A';
-        let password = query.Password;
-        let name = query.Name;
-        let username = query['PlatNomor'].toUpperCase();
-        let platNomor = query['PlatNomor'].toUpperCase();
+        let password = query['password'];
+        let name = query['name'];
+        let username = query['platnomor'].toUpperCase();
+        let platNomor = query['platnomor'].toUpperCase();
         autoIncrement.getNextSequence(database, 'tb_user', 'ID', (err, autoIndex) => {
             if(err) reject(err);
             else {

@@ -47,4 +47,42 @@ router.post('/login', async(req, res) => {
     }
 });
 
+
+router.post('/register-angkot', async(req, res) => {
+    let query = {};
+    let entity = req['body']['entity'];
+    query['password'] = req['body']['password'];
+    query['name'] = req['body']['name'];
+    query['platnomor'] = req['body']['platnomor'];
+    if(entity === undefined || query['password'] === undefined
+    || query['name'] === undefined || query['platnomor'] === undefined)
+        res.status(200).send(commonMessage.body_body_empty);
+    try {
+        let findPhone = [], findemail = [], validMsg;
+        if (validator.validatePhone(entity)) {
+            query['phonenumber'] = entity;
+            query['email'] = 'N/A';
+            findPhone = await userModel.findPhoneNumber(query['phonenumber']);
+            validMsg = commonMessage.phone_already;
+        } else if (validator.validateEmail(entity)) {
+            query['phonenumber'] = 'N/A';
+            query['email'] = entity;
+            findemail = await userModel.findEmail(query['email']);
+            validMsg = commonMessage.email_already;
+        }
+        if(findemail.length > 0 || findPhone.length > 0) res.status(200).send(validMsg);
+        else {
+            let findPlatNomor = await userModel.findUserName(query['platnomor']);
+            if(findPlatNomor.length > 0) res.status(200).send(commonMessage.plat_already);
+            else {
+                await userModel.insertUserAngkot(query);
+                res.status(200).send({success: true, message: "Berhasil membuat akun", code: "000"});
+            }
+        }
+    }catch (err) {
+        console.log(err);
+        res.status(200).send(commonMessage.service_not_responding);
+    }
+});
+
 module.exports = router;
