@@ -13,5 +13,10 @@
     "success" : false,
     "message" : "Server tidak merespon",
     "code" : "500"
+  },
+  "email_not_valid" : {
+    "success" : false,
+    "message" : "Email tidak terdaftar atau password tidak sesuai",
+    "code" : "002"
   }
 }

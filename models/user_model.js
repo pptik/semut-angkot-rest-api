@@ -3,7 +3,8 @@ const moment = require('moment');
 let database = app.db;
 let userCollection = database.collection('tb_user');
 let sessionCollection = database.collection('tb_session');
-var autoIncrement = require("mongodb-autoincrement");
+const autoIncrement = require("mongodb-autoincrement");
+const md5 = require('md5');
 
 /** find registered email **/
 findEmail = (email) => {
@@ -57,6 +58,15 @@ initSession = (userID) => {
                                     else resolve(result);
                                 });
                             }
+                        });
+                    }else {
+                        let _query = {UserID: userID, ID: md5(userID+"-"+moment().format('YYYYMMDDHHmmss')),
+                            StartTime: moment().format('YYYY-MM-DD HH:mm:ss'),
+                            LastTime:moment().format('YYYY-MM-DD HH:mm:ss'),
+                            EndTime: "0000-00-00 00:00:00"};
+                        sessionCollection.insertOne(_query, (err, result) => {
+                            if (err) reject(err);
+                            else resolve(result);
                         });
                     }
                 }
