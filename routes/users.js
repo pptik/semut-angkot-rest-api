@@ -12,7 +12,8 @@ router.post('/', async(req, res) => {
         res.status(200).send(commonMessage.body_body_empty);
     else {
         let isEmail = validator.validateEmail(entity);
-        res.status(200).send(isEmail);
+        let isNumber = validator.validatePhone(entity);
+        res.status(200).send(isEmail+", "+isNumber);
     }
 });
 
