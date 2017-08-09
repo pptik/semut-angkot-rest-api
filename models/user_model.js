@@ -26,6 +26,16 @@ findPhoneNumber = (phoneNumber) => {
     });
 };
 
+/** find registered platnomor **/
+findPlatNomor = (platnomor) => {
+    return new Promise((resolve, reject) => {
+        userCollection.find({PhoneNumber :platnomor}).toArray((err, results) => {
+            if(err) reject(err);
+            else resolve(results);
+        });
+    });
+};
+
 /** find registered username **/
 findUserName = (username) => {
     return new Promise((resolve, reject) =>{
@@ -225,6 +235,63 @@ insertUser = (query) => {
 };
 
 
+/** insert user angkot**/
+insertUserAngkot = (query) => {
+    return new Promise((resolve, reject) =>{
+        let email = (query.Email !== undefined) ? query['Email'] : 'N/A';
+        let phonenumber = (query.Phonenumber !== undefined) ? query['Phonenumber'] : 'N/A';
+        let gender = 3;
+        let birthday = 'N/A';
+        let password = query.Password;
+        let name = query.Name;
+        let username = query['PlatNomor'].toUpperCase();
+        let platNomor = query['PlatNomor'].toUpperCase();
+        autoIncrement.getNextSequence(database, 'tb_user', 'ID', (err, autoIndex) => {
+            if(err) reject(err);
+            else {
+                let userQuery = {
+                    "ID" : autoIndex,
+                    "Name" : name,
+                    "username" : username,
+                    "Email" : email,
+                    "CountryCode" : 62,
+                    "PhoneNumber" : phonenumber,
+                    "Gender" : gender,
+                    "Birthday" : birthday,
+                    "Password" : md5(password),
+                    "Joindate" : moment().format('YYYY-MM-DD HH:mm:ss'),
+                    "Poin" : 100,
+                    "PoinLevel" : 100,
+                    "AvatarID" : gender,
+                    "facebookID" : null,
+                    "Verified" : 0,
+                    "VerifiedNumber" : null,
+                    "Visibility" : 0,
+                    "Reputation" : 0,
+                    "flag" : 1,
+                    "Barcode" : "",
+                    "deposit" : 0,
+                    "ID_role" : null,
+                    "Plat_motor" : null,
+                    "ID_ktp" : null,
+                    "foto" : null,
+                    "PushID" : "no id",
+                    "Status_online" : null,
+                    "Path_foto" : null,
+                    "Nama_foto" : null,
+                    "Path_ktp" : null,
+                    "Nama_ktp" : null,
+                    "PlatNomor" : platNomor
+                };
+                userCollection.insertOne(userQuery, (err, result) => {
+                    if(err) reject(err);
+                    else resolve(result);
+                });
+            }
+        });
+    });
+};
+
 
 module.exports = {
     findEmail:findEmail,
@@ -237,4 +304,6 @@ module.exports = {
     changeOnlineStatus:changeOnlineStatus,
     getProfileById:getProfileById,
     insertUser:insertUser,
+    insertUserAngkot:insertUserAngkot,
+    findPlatNomor:findPlatNomor
 };
