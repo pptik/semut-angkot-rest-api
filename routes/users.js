@@ -37,7 +37,7 @@ router.post('/login', async(req, res) => {
                     let session = await userModel.getSession(profile['ID']);
                     delete profile['Password'];
                     profile['SessionID'] = session;
-                    res.status(200).send(profile);
+                    res.status(200).send({success: true, code: "000", message: "berhasil memuat permintaan", profile: profile});
                 }else res.status(200).send(validMsg);
             }
         }catch (err){
