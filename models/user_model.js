@@ -216,3 +216,15 @@ insertUser = (query) => {
 
 
 
+module.exports = {
+    findEmail:findEmail,
+    findPhoneNumber:findPhoneNumber,
+    findUserName:findUserName,
+    initSession:initSession,
+    getSession:getSession,
+    checkSession:checkSession,
+    checkCompleteSession:checkCompleteSession,
+    changeOnlineStatus:changeOnlineStatus,
+    getProfileById:getProfileById,
+    insertUser:insertUser,
+};
