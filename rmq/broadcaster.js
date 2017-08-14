@@ -13,7 +13,7 @@ broadcastAngkot = async(connection) => {
             let test = {test : "test"}.toString();
             let data = await userModel.getAngkotLocation();
             let msg = JSON.stringify(data);
-            console.log(msg);
+           // console.log(msg);
             await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(msg));
         }, 1500);
     }catch (err){

@@ -9,7 +9,9 @@ amqp.connect(broker_uri, function(err, conn) {
             let msg = {
                 session_id : '2aa150879a87d26c1c4796e10be14259',
                 latitude : -33.234,
-                longitude : 23.9483
+                longitude : 23.9483,
+                time : '15-08-2017 13:09:07',
+                jumlah_penumpang : 9
             };
             ch.publish(exchangeName, routingKey, new Buffer(JSON.stringify(msg)),
                 {});

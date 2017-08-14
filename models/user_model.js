@@ -106,7 +106,9 @@ updateUserLocation = (query) => {
                       {
                           type: 'Point',
                           coordinates:[query['longitude'], query['latitude']]
-                      }
+                      },
+                  LastUpdate: query['time'],
+                  JumlahPenumpang: query['jumlah_penumpang']
               }
           }
       }, function(err, result) {
@@ -152,6 +154,8 @@ getAngkotLocation = () => {
     });
 };
 
+
+/** update jumlah penumpang**/
 
 
 
