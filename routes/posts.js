@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const commonMsg = require('../configs/common_messages.json');
+const userModel = require('../models/user_model');
+const postModel = require('../models/post_model');
 
-router.post('/create', (req, res) => {
+router.post('/create', async(req, res) => {
     let query = req.body;
     if(
             query['detail'] === undefined ||
@@ -11,7 +13,25 @@ router.post('/create', (req, res) => {
     ){
         res.status(200).send(commonMsg.body_body_empty);
     }else {
-        query['tanggal'] = new Date(query['Date']);
+        try{
+            let profile = await userModel.checkCompleteSession(query['session_id']);
+            if(profile === null) res.status(200).send(commonMsg.session_invalid);
+            else {
+                query['tanggal'] = new Date(query['tanggal']);
+                delete query['session_id'];
+                query['PostBy'] = {
+                    UserID : profile['UserID'],
+                    username : profile['username'],
+                    Name : profile['Name']
+                };
+                await postModel.createPost(query);
+                let response = {success:true, code: '0000', message: "berhasil membuat laporan"};
+                res.status(200).send(response);
+            }
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
     }
 });
 

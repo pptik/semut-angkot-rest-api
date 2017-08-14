@@ -13,6 +13,19 @@ function convertISODateToString(date) {
     return year+'-' + month + '-'+dt+' '+time;
 }
 
+
+
+
+function addZero(number) {
+    number = parseInt(number);
+    var s = "";
+    if(number < 10){
+        s = '0'+number.toString();
+    }else s = number.toString();
+
+    return s;
+}
+
 module.exports = {
     convertISODateToString:convertISODateToString
 };

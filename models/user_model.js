@@ -170,7 +170,13 @@ checkCompleteSession = (sessid) => {
                     userCollection.find({ID: results[0].UserID})
                         .toArray((err, ress) => {
                         if(err)reject(err);
-                        else resolve({UserID: results[0].UserID, Name: ress[0].Name, Email: ress[0].Email});
+                        else resolve(
+                            {
+                                UserID: results[0].UserID,
+                                Name: ress[0].Name,
+                                Email: ress[0].Email,
+                                username : ress[0].username
+                            });
                     });
                 }else resolve(null);
         });
