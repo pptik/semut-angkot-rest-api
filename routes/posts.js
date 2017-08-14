@@ -42,4 +42,25 @@ router.post('/create', async(req, res) => {
     }
 });
 
+
+
+router.post('/get', async(req, res) => {
+    let query = req.body;
+    if(query['session_id'] === undefined){
+        res.status(200).send(commonMsg.body_body_empty);
+    }else {
+        try{
+            let profile = await userModel.checkCompleteSession(query['session_id']);
+            if(profile === null) res.status(200).send(commonMsg.session_invalid);
+            else {
+               let response = await postModel.getPosts();
+                res.status(200).send(response);
+            }
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
+    }
+});
+
 module.exports = router;

@@ -17,11 +17,26 @@ createPost = (query) =>{
 
 
 /** get laporan by date**/
-getPost = () =>{
-
+getPosts = () =>{
+    return new Promise(async(resolve, reject) =>{
+        try {
+            //let dateNow = new Date();
+            let dateNow = moment().format("YYYY-MM-DD");
+            let response = await postCollection.find(
+                {
+                    tanggal : { $gte : new Date(dateNow)}
+                }
+            ).toArray();
+            resolve(response);
+        }catch (err){
+            console.log(err);
+            reject(err);
+        }
+    });
 };
 
 
 module.exports = {
-    createPost:createPost
+    createPost:createPost,
+    getPosts:getPosts
 };
