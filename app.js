@@ -66,6 +66,9 @@ database.connect().then(db =>{
     /** export mongodb connection **/
     app.db = db;
     module.exports = app;
+    require('./tests/test_add_2spehere_index').createIndex(db.collection('tb_post_angkot'), (err, ok) =>{
+       console.log(ok);
+    });
     /** run mq service**/
     const rmqConnection = require('./rmq/connection');
     rmqConnection.connect();
