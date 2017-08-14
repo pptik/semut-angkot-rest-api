@@ -105,7 +105,7 @@ updateUserLocation = (query) => {
                   location:
                       {
                           type: 'Point',
-                          coordinates:[query['Longitude'], query['Latitude']]
+                          coordinates:[query['longitude'], query['latitude']]
                       }
               }
           }

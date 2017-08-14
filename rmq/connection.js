@@ -21,10 +21,14 @@ consume = async (connection) => {
         let q = await channel.assertQueue(rmq_config.service_queue_name, {exclusive : false});
         await channel.bindQueue(q.queue, rmq_config.exchange_name, rmq_config.service_route);
         channel.consume(q.queue, (msg) => {
+            console.log("=================================================");
             console.log(msg.content.toString());
             /** update angkot location**/
             if(msg.fields.routingKey === rmq_config.route_update_angkot){
                 let query = JSON.parse(msg.content.toString());
+                console.log("-------------------------------------------------");
+                console.log('UPDATE LOKASI ANGKOT');
+                console.log("-------------------------------------------------");
                 userService.updateUserLocation(query).then(result =>{
                     console.log("process success : "+result);
                 }).catch(err =>{

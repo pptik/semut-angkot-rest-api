@@ -8,7 +8,6 @@ const database = require('./database/mongo_connection');
 const debug = require('debug')('semut-svc:server');
 const http = require('http');
 const commonMsg = require('./configs/common_messages.json');
-const rmqConnection = require('./rmq/connection');
 let app = express();
 
 /** setup express **/
@@ -68,7 +67,8 @@ database.connect().then(db =>{
     app.db = db;
     module.exports = app;
     /** run mq service**/
-    //rmqConnection.connect();
+    const rmqConnection = require('./rmq/connection');
+    rmqConnection.connect();
     /** define routes**/
     let index = require('./routes/index');
     let users = require('./routes/users');
