@@ -128,7 +128,23 @@ router.post('/register', async(req, res) => {
 
 
 
-
+router.post('/status', async(req, res) => {
+    let query = req.body;
+    if(query['session_id'] === undefined){
+        res.status(200).send(commonMessage.body_body_empty);
+    }else {
+        try{
+            let profile = await userModel.checkCompleteSession(query['session_id']);
+            if(profile === null) res.status(200).send(commonMessage.session_invalid);
+            else {
+                res.status(200).send({success: true, code: '0000', message: "Sesion Anda valid"});
+            }
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
+    }
+});
 
 
 
