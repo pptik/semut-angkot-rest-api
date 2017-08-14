@@ -1,5 +1,6 @@
 const rmq_config = require('../configs/rmq.json');
 let rmq = require('amqplib');
+const userService = require('./users');
 
 /** connect to rabbit**/
 connect = async() => {
@@ -23,7 +24,12 @@ consume = async (connection) => {
             console.log(msg.content.toString());
             /** update angkot location**/
             if(msg.fields.routingKey === rmq_config.route_update_angkot){
-
+                let query = JSON.parse(msg.content.toString());
+                userService.updateUserLocation(query).then(result =>{
+                    console.log("process success : "+result);
+                }).catch(err =>{
+                   console("process failed : "+err);
+                });
             }
         }, {noAck: true});
         console.log("Service consume on : "+rmq_config.service_route);

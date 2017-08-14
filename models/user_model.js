@@ -97,6 +97,29 @@ getSession = (userID) => {
 };
 
 
+updateUserLocation = (query) => {
+  return new Promise((resolve, reject) => {
+      userCollection.updateOne({ID: query['ID']},{ $set:
+          {
+              Angkot : {
+                  location:
+                      {
+                          type: 'Point',
+                          coordinates:[query['Longitude'], query['Latitude']]
+                      }
+              }
+          }
+      }, function(err, result) {
+          if(err){
+              reject(err);
+          }else {
+             resolve(result);
+          }
+      });
+  });
+};
+
+
 /** check session **/
 checkSession = (sessid) => {
     return new Promise((resolve, reject) =>{
@@ -380,5 +403,6 @@ module.exports = {
     insertUser:insertUser,
     insertUserAngkot:insertUserAngkot,
     findPlatNomor:findPlatNomor,
-    insertUser:insertUser
+    insertUser:insertUser,
+    updateUserLocation:updateUserLocation
 };

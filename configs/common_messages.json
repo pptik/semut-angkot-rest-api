@@ -48,5 +48,10 @@
     "success" : false,
     "message" : "Plat Nomor Telah digunakan, silahkan login jika Anda sudah terdaftar sebelumnya",
     "code" : "008"
+  },
+  "session_invalid" : {
+    "success" : false,
+    "message" : "Session tidak valid",
+    "code" : "009"
   }
 }
