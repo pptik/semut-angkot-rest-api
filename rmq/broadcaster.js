@@ -1,0 +1,24 @@
+var userModel = require('../models/user_model');
+var configs = require('../configs/rmq.json');
+
+/** broadcast lokasi angkot **/
+broadcastAngkot = async(connection) => {
+    try {
+        let ch = await connection.createChannel();
+        await ch.assertExchange(configs.exchange_name, 'topic', {durable: false});
+        let q = await ch.assertQueue(configs.broadcast_queue_name, {exclusive: false, messageTtl: 1000});
+        await ch.bindQueue(q.queue, configs.exchange_name, configs.broadcast_queue_name);
+        console.log("starting broadcast via "+configs.broadcast_route);
+        setInterval(async function () {
+            let test = {test : "test"}.toString();
+            await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(test));
+        }, 1500);
+    }catch (err){
+        console.log(err);
+    }
+};
+
+
+module.exports = {
+    broadcastAngkot:broadcastAngkot
+};
