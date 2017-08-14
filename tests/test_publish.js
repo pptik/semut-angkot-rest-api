@@ -1,7 +1,7 @@
 const amqp = require('amqplib/callback_api');
 const broker_uri = require('../configs/rmq.json').broker_uri;
 const exchangeName = require('../configs/rmq.json').exchange_name;
-const routingKey = 'semut.angkot.update';
+const routingKey = 'semut.angkot.service.update';
 
 amqp.connect(broker_uri, function(err, conn) {
     conn.createChannel(function(err, ch) {
@@ -13,7 +13,8 @@ amqp.connect(broker_uri, function(err, conn) {
                 time : '15-08-2017 13:09:07',
                 jumlah_penumpang : 9
             };
-            ch.publish(exchangeName, routingKey, new Buffer(JSON.stringify(msg)),
+            msg = JSON.stringify(msg);
+            ch.publish(exchangeName, routingKey, new Buffer(msg),
                 {});
             console.log(" [x] Sent ");
         });
