@@ -16,6 +16,12 @@ createPost = (query) =>{
 };
 
 
+/** get laporan by date**/
+getPost = () =>{
+
+};
+
+
 module.exports = {
     createPost:createPost
 };

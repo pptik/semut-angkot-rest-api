@@ -9,7 +9,9 @@ router.post('/create', async(req, res) => {
     if(
             query['detail'] === undefined ||
             query['session_id'] === undefined ||
-            query['tanggal'] === undefined
+            query['tanggal'] === undefined ||
+            query['latitude'] === undefined ||
+            query['longitude'] === undefined
     ){
         res.status(200).send(commonMsg.body_body_empty);
     }else {
@@ -23,6 +25,11 @@ router.post('/create', async(req, res) => {
                     UserID : profile['UserID'],
                     username : profile['username'],
                     Name : profile['Name']
+                };
+                query['location'] = {
+                    "type": "Point",
+                    "coordinates": [parseFloat(query['longitude']), parseFloat(query['latitude'])]
+
                 };
                 await postModel.createPost(query);
                 let response = {success:true, code: '0000', message: "berhasil membuat laporan"};
