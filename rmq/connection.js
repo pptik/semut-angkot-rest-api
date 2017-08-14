@@ -26,6 +26,7 @@ consume = async (connection) => {
 
             }
         }, {noAck: true});
+        console.log("Service consume on : "+rmq_config.service_route);
     }catch(err) {
         console.log(err);
     }

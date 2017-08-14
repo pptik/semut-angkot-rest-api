@@ -68,7 +68,7 @@ database.connect().then(db =>{
     app.db = db;
     module.exports = app;
     /** run mq service**/
-    rmqConnection.connect();
+    //rmqConnection.connect();
     /** define routes**/
     let index = require('./routes/index');
     let users = require('./routes/users');

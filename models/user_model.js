@@ -365,5 +365,6 @@ module.exports = {
     getProfileById:getProfileById,
     insertUser:insertUser,
     insertUserAngkot:insertUserAngkot,
-    findPlatNomor:findPlatNomor
+    findPlatNomor:findPlatNomor,
+    insertUser:insertUser
 };
