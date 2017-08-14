@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model.js" afterPath="$PROJECT_DIR$/models/user_model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rmq/broadcaster.js" afterPath="$PROJECT_DIR$/rmq/broadcaster.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rmq/users.js" afterPath="$PROJECT_DIR$/rmq/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_publish.js" afterPath="$PROJECT_DIR$/tests/test_publish.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/tests/test_publish.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
-              <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -248,7 +243,7 @@
       <workItem from="1502681795032" duration="6624000" />
       <workItem from="1502693918695" duration="11383000" />
       <workItem from="1502717490263" duration="11000" />
-      <workItem from="1502718376751" duration="1071000" />
+      <workItem from="1502718376751" duration="1199000" />
     </task>
     <task id="LOCAL-00001" summary="remove view engine">
       <created>1502165528808</created>
@@ -425,11 +420,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502705028055</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="update location query">
+      <created>1502719818180</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1502719818180</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45425000" />
+    <option name="totallyTimeSpent" value="45553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -480,7 +482,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove view engine" />
     <MESSAGE value="test git update-index --skip-worktree" />
     <MESSAGE value="change lang level to ecma 6" />
     <MESSAGE value="mongodb pool" />
@@ -505,7 +506,8 @@
     <MESSAGE value="broadcast angkot ok" />
     <MESSAGE value="query broadcast ok" />
     <MESSAGE value="test receive" />
-    <option name="LAST_COMMIT_MESSAGE" value="test receive" />
+    <MESSAGE value="update location query" />
+    <option name="LAST_COMMIT_MESSAGE" value="update location query" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -881,7 +883,7 @@
     <entry file="file://$PROJECT_DIR$/tests/test_publish.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
-          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
           <folding />
         </state>
       </provider>
