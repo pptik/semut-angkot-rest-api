@@ -141,7 +141,7 @@ router.post('/status', async(req, res) => {
             }
         }catch (err){
             console.log(err);
-            res.status(200).send(commonMsg.service_not_responding);
+            res.status(200).send(commonMessage.service_not_responding);
         }
     }
 });

@@ -20,8 +20,8 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="139" column="94" lean-forward="false" selection-start-line="139" selection-start-column="94" selection-end-line="139" selection-end-column="94" />
+            <state relative-caret-position="298">
+              <caret line="143" column="46" lean-forward="false" selection-start-line="143" selection-start-column="46" selection-end-line="143" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -202,7 +202,7 @@
       <workItem from="1502681795032" duration="6624000" />
       <workItem from="1502693918695" duration="11383000" />
       <workItem from="1502717490263" duration="11000" />
-      <workItem from="1502718376751" duration="8956000" />
+      <workItem from="1502718376751" duration="8977000" />
     </task>
     <task id="LOCAL-00001" summary="remove view engine">
       <created>1502165528808</created>
@@ -449,11 +449,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502728472111</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="session checker">
+      <created>1502728654707</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1502728654707</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53310000" />
+    <option name="totallyTimeSpent" value="53331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -504,7 +511,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login by phonenumber ok" />
     <MESSAGE value="login with email, phone or password" />
     <MESSAGE value="common msg to success req" />
     <MESSAGE value="find registered plat nomor" />
@@ -529,7 +535,8 @@
     <MESSAGE value="insert 2dspehere index tb_post_angkot" />
     <MESSAGE value="get post by date" />
     <MESSAGE value="broadcast angkot &amp; laporan" />
-    <option name="LAST_COMMIT_MESSAGE" value="broadcast angkot &amp; laporan" />
+    <MESSAGE value="session checker" />
+    <option name="LAST_COMMIT_MESSAGE" value="session checker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -966,8 +973,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="139" column="94" lean-forward="false" selection-start-line="139" selection-start-column="94" selection-end-line="139" selection-end-column="94" />
+        <state relative-caret-position="298">
+          <caret line="143" column="46" lean-forward="false" selection-start-line="143" selection-start-column="46" selection-end-line="143" selection-end-column="46" />
           <folding />
         </state>
       </provider>
