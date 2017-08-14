@@ -29,9 +29,6 @@ updateUserLocation = (query) => {
 };
 
 
-getAngkotLocation = () => {
-
-};
 
 
 module.exports = {

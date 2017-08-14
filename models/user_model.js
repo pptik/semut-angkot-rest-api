@@ -133,6 +133,24 @@ checkSession = (sessid) => {
     });
 };
 
+/** get angkot location**/
+getAngkotLocation = () => {
+    return new Promise((resolve, reject) => {
+        userCollection.find(
+            { $and:
+                [
+                    { ID_role: 20 },
+                    { Angkot: { $exists: true } },
+                    {"Angkot.location.coordinates": {$ne: [0,0] }}
+                ] }
+            ).toArray((err, results) =>{
+           if(err)reject(err);
+           else {
+               resolve(results);
+           }
+        });
+    });
+};
 
 
 
@@ -404,5 +422,6 @@ module.exports = {
     insertUserAngkot:insertUserAngkot,
     findPlatNomor:findPlatNomor,
     insertUser:insertUser,
-    updateUserLocation:updateUserLocation
+    updateUserLocation:updateUserLocation,
+    getAngkotLocation:getAngkotLocation
 };

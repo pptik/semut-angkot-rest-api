@@ -11,7 +11,10 @@ broadcastAngkot = async(connection) => {
         console.log("starting broadcast via "+configs.broadcast_route);
         setInterval(async function () {
             let test = {test : "test"}.toString();
-            await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(test));
+            let data = await userModel.getAngkotLocation();
+            let msg = JSON.stringify(data);
+            console.log(msg);
+            await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(msg));
         }, 1500);
     }catch (err){
         console.log(err);
