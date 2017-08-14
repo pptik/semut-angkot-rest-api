@@ -66,6 +66,11 @@ database.connect().then(db =>{
     }
     /** export mongodb connection **/
     app.db = db;
+    let test = require('./tests/test_add_2spehere_index');
+    test.createIndex(db.collection('tb_user'), (err, result) =>{
+       if(err)console.log(err);
+       else console.log(result);
+    });
     module.exports = app;
     /** run mq service**/
     //rmqConnection.connect();

@@ -240,6 +240,8 @@ insertUserAngkot = (query) => {
     return new Promise((resolve, reject) =>{
         let email = query['email'];
         let phonenumber = query['phonenumber'];
+        let trayek = query['trayek'];
+        let trayekID = parseInt(query['trayek_id']);
         let gender = 3;
         let birthday = 'N/A';
         let password = query['password'];
@@ -281,7 +283,19 @@ insertUserAngkot = (query) => {
                     "Nama_foto" : null,
                     "Path_ktp" : null,
                     "Nama_ktp" : null,
-                    "PlatNomor" : platNomor
+                    "Angkot" : {
+                        "PlatNomor" : platNomor,
+                        "Trayek": {
+                            "Nama": trayek,
+                            "TrayekID" : trayekID
+                        },
+                        "JumlahPenumpang" : 0,
+                        "location" : {
+                            "type": "Point",
+                            "coordinates": [0,0]
+                        }
+                    }
+
                 };
                 userCollection.insertOne(userQuery, (err, result) => {
                     if(err) reject(err);

@@ -54,8 +54,11 @@ router.post('/register-angkot', async(req, res) => {
     query['password'] = req['body']['password'];
     query['name'] = req['body']['name'];
     query['platnomor'] = req['body']['platnomor'];
-    if(entity === undefined || query['password'] === undefined
-    || query['name'] === undefined || query['platnomor'] === undefined)
+    query['trayek'] = req['body']['trayek'];
+    query['trayek_id'] = req['body']['trayek_id'];
+
+    if(entity === undefined || query['password'] === undefined || query['trayek'] === undefined
+    || query['name'] === undefined || query['platnomor'] === undefined || query['trayek_id'] === undefined)
         res.status(200).send(commonMessage.body_body_empty);
     try {
         let findPhone = [], findemail = [], validMsg;
