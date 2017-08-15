@@ -135,7 +135,7 @@ router.post('/status', async(req, res) => {
         res.status(200).send(commonMessage.body_body_empty);
     }else {
         try{
-            let profile = await userModel.checkCompleteSession(query['session_id']);
+            let profile = await userModel.checkSession(query['session_id']);
             if(profile === null) res.status(200).send(commonMessage.session_invalid);
             else {
                 res.status(200).send({success: true, code: '0000', message: "Sesion Anda valid"});
