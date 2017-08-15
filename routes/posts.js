@@ -19,7 +19,7 @@ router.post('/create', async(req, res) => {
             let profile = await userModel.checkCompleteSession(query['session_id']);
             if(profile === null) res.status(200).send(commonMsg.session_invalid);
             else {
-                query['tanggal'] = new Date(query['tanggal']);
+                query['tanggal'] = new Date();
                 delete query['session_id'];
                 query['PostBy'] = {
                     UserID : profile['UserID'],
