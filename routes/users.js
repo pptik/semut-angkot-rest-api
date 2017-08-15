@@ -4,9 +4,10 @@ const userModel = require('../models/user_model');
 const commonMessage = require('../configs/common_messages.json');
 const validator = require('../utilities/string_validator');
 const md5 = require('md5');
+const cors = require('cors');
 
 
-router.post('/login', async(req, res) => {
+router.post('/login', cors(), async(req, res) => {
     let entity = req['body']['entity'];
     let password = req['body']['password'];
     if(entity === undefined || password === undefined)
@@ -48,7 +49,7 @@ router.post('/login', async(req, res) => {
 });
 
 
-router.post('/register-angkot', async(req, res) => {
+router.post('/register-angkot', cors(), async(req, res) => {
     let query = {};
     let entity = req['body']['entity'];
     query['password'] = req['body']['password'];
