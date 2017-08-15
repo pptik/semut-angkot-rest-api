@@ -5,6 +5,7 @@ let userCollection = database.collection('tb_user');
 let sessionCollection = database.collection('tb_session');
 const autoIncrement = require("mongodb-autoincrement");
 const md5 = require('md5');
+const converter = require('../utilities/converter');
 
 /** find registered email **/
 findEmail = (email) => {
@@ -151,6 +152,9 @@ getAngkotLocation = () => {
             ).toArray((err, results) =>{
            if(err)reject(err);
            else {
+               for(let i = 0; i < results.length; i++){
+                   converter.convertISODateToString(results[i]['Angkot']['LastUpdate']);
+               }
                resolve(results);
            }
         });
