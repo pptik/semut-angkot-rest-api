@@ -15,6 +15,7 @@ broadcastAngkot = async(connection) => {
             let dataAngkot = await userModel.getAngkotLocation();
          //   console.log(dataAngkot);
             let dataPost = await postModel.getPosts();
+          //  console.log(dataPost);
             let msg = {angkot : dataAngkot, laporan : dataPost};
             msg = JSON.stringify(msg);
            // console.log(msg);

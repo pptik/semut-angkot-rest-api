@@ -21,7 +21,8 @@ getPosts = () =>{
     return new Promise(async(resolve, reject) =>{
         try {
             //let dateNow = new Date();
-            let dateNow = moment().format("YYYY-MM-DD");
+            let dateNow = moment().format("YYYY-MM-DD")+" 00:00:00";
+            //console.log(dateNow);
             let response = await postCollection.find(
                 {
                     tanggal : { $gte : new Date(dateNow)}
