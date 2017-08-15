@@ -16,7 +16,7 @@ router.post('/create', async(req, res) => {
         res.status(200).send(commonMsg.body_body_empty);
     }else {
         try{
-            let profile = await userModel.checkSession(query['session_id']);
+            let profile = await userModel.checkCompleteSession(query['session_id']);
             if(profile === null) res.status(200).send(commonMsg.session_invalid);
             else {
                 query['tanggal'] = new Date(query['tanggal']);

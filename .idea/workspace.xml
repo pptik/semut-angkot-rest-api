@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model.js" afterPath="$PROJECT_DIR$/models/user_model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rmq/broadcaster.js" afterPath="$PROJECT_DIR$/rmq/broadcaster.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/posts.js" afterPath="$PROJECT_DIR$/routes/posts.js" />
     </list>
@@ -53,8 +54,8 @@
       <file leaf-file-name="user_model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2300">
-              <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+            <state relative-caret-position="232">
+              <caret line="171" column="76" lean-forward="false" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
               <folding>
                 <element signature="e#391#598#0" expanded="false" />
                 <element signature="e#667#888#0" expanded="false" />
@@ -62,29 +63,29 @@
                 <element signature="e#1240#1455#0" expanded="false" />
                 <element signature="e#1509#3319#0" expanded="false" />
                 <element signature="e#3368#3648#0" expanded="false" />
-                <element signature="e#6600#6865#0" expanded="false" />
-                <element signature="e#6924#8031#0" expanded="false" />
-                <element signature="e#8079#10040#0" expanded="false" />
+                <element signature="e#6634#6899#0" expanded="false" />
+                <element signature="e#6958#8065#0" expanded="false" />
+                <element signature="e#8113#10074#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="broadcaster.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="broadcaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rmq/broadcaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+            <state relative-caret-position="150">
+              <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="posts.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="posts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+              <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -123,9 +124,9 @@
         <option value="$PROJECT_DIR$/models/post_model.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/posts.js" />
         <option value="$PROJECT_DIR$/models/user_model.js" />
         <option value="$PROJECT_DIR$/rmq/broadcaster.js" />
-        <option value="$PROJECT_DIR$/routes/posts.js" />
       </list>
     </option>
   </component>
@@ -265,7 +266,7 @@
       <workItem from="1502783536850" duration="526000" />
       <workItem from="1502790891440" duration="8000" />
       <workItem from="1502806882479" duration="90000" />
-      <workItem from="1502815265693" duration="18000" />
+      <workItem from="1502815265693" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="remove view engine">
       <created>1502165528808</created>
@@ -589,11 +590,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502782576921</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fix invalid session post">
+      <created>1502815302922</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1502815302923</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59788000" />
+    <option name="totallyTimeSpent" value="59931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -604,7 +612,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33930704" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33930704" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41696537" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -644,7 +652,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="insert user" />
     <MESSAGE value="disable rmq conn" />
     <MESSAGE value="trayek &amp; trayek id" />
     <MESSAGE value="create index 2dspehere" />
@@ -669,7 +676,8 @@
     <MESSAGE value="header problem" />
     <MESSAGE value="add cors options" />
     <MESSAGE value="convert iso date to string" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert iso date to string" />
+    <MESSAGE value="fix invalid session post" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix invalid session post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -725,9 +733,9 @@
             <element signature="e#1240#1455#0" expanded="false" />
             <element signature="e#1509#3319#0" expanded="false" />
             <element signature="e#3368#3648#0" expanded="false" />
-            <element signature="e#6600#6865#0" expanded="false" />
-            <element signature="e#6924#8031#0" expanded="false" />
-            <element signature="e#8079#10040#0" expanded="false" />
+            <element signature="e#6634#6899#0" expanded="false" />
+            <element signature="e#6958#8065#0" expanded="false" />
+            <element signature="e#8113#10074#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,9 +782,9 @@
             <element signature="e#1240#1455#0" expanded="false" />
             <element signature="e#1509#3319#0" expanded="false" />
             <element signature="e#3368#3648#0" expanded="false" />
-            <element signature="e#6600#6865#0" expanded="false" />
-            <element signature="e#6924#8031#0" expanded="false" />
-            <element signature="e#8079#10040#0" expanded="false" />
+            <element signature="e#6634#6899#0" expanded="false" />
+            <element signature="e#6958#8065#0" expanded="false" />
+            <element signature="e#8113#10074#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,9 +838,9 @@
             <element signature="e#1240#1455#0" expanded="false" />
             <element signature="e#1509#3319#0" expanded="false" />
             <element signature="e#3368#3648#0" expanded="false" />
-            <element signature="e#6600#6865#0" expanded="false" />
-            <element signature="e#6924#8031#0" expanded="false" />
-            <element signature="e#8079#10040#0" expanded="false" />
+            <element signature="e#6634#6899#0" expanded="false" />
+            <element signature="e#6958#8065#0" expanded="false" />
+            <element signature="e#8113#10074#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -886,9 +894,9 @@
             <element signature="e#1240#1455#0" expanded="false" />
             <element signature="e#1509#3319#0" expanded="false" />
             <element signature="e#3368#3648#0" expanded="false" />
-            <element signature="e#6600#6865#0" expanded="false" />
-            <element signature="e#6924#8031#0" expanded="false" />
-            <element signature="e#8079#10040#0" expanded="false" />
+            <element signature="e#6634#6899#0" expanded="false" />
+            <element signature="e#6958#8065#0" expanded="false" />
+            <element signature="e#8113#10074#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1070,10 +1078,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/user_model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2300">
-          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+        <state relative-caret-position="232">
+          <caret line="171" column="76" lean-forward="false" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
           <folding>
             <element signature="e#391#598#0" expanded="false" />
             <element signature="e#667#888#0" expanded="false" />
@@ -1081,25 +1097,17 @@
             <element signature="e#1240#1455#0" expanded="false" />
             <element signature="e#1509#3319#0" expanded="false" />
             <element signature="e#3368#3648#0" expanded="false" />
-            <element signature="e#6600#6865#0" expanded="false" />
-            <element signature="e#6924#8031#0" expanded="false" />
-            <element signature="e#8079#10040#0" expanded="false" />
+            <element signature="e#6634#6899#0" expanded="false" />
+            <element signature="e#6958#8065#0" expanded="false" />
+            <element signature="e#8113#10074#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rmq/broadcaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/posts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        <state relative-caret-position="150">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>

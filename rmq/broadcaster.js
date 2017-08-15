@@ -13,7 +13,7 @@ broadcastAngkot = async(connection) => {
         setInterval(async function () {
             let test = {test : "test"}.toString();
             let dataAngkot = await userModel.getAngkotLocation();
-            console.log(dataAngkot);
+         //   console.log(dataAngkot);
             let dataPost = await postModel.getPosts();
             let msg = {angkot : dataAngkot, laporan : dataPost};
             msg = JSON.stringify(msg);

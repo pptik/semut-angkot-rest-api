@@ -169,7 +169,7 @@ getAngkotLocation = () => {
 /** check complete session **/
 checkCompleteSession = (sessid) => {
     return new Promise((resolve, reject) =>{
-        sessionCollection.find({ID: sessid})
+        sessionCollection.find({ID: sessid, "EndTime": "0000-00-00 00:00:00"})
             .toArray((err, results) => {
             if (err) reject(err);
             else
