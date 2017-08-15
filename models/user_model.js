@@ -101,7 +101,10 @@ updateUserLocation = (query) => {
   return new Promise((resolve, reject) => {
       userCollection.updateOne({ID: query['ID']},{ $set:
           {
-              Angkot : {
+              'Angkot.location.coordinates' : [query['longitude'], query['latitude']],
+              'Angkot.JumlahPenumpang' : query['jumlah_penumpang'],
+              'Angkot.LastUpdate' : new Date(query['time'])
+              /*Angkot : {
                   location:
                       {
                           type: 'Point',
@@ -109,7 +112,7 @@ updateUserLocation = (query) => {
                       },
                   LastUpdate: query['time'],
                   JumlahPenumpang: query['jumlah_penumpang']
-              }
+              }*/
           }
       }, function(err, result) {
           if(err){
@@ -335,6 +338,7 @@ insertUserAngkot = (query) => {
                     "Path_ktp" : null,
                     "Nama_ktp" : null,
                     "Angkot" : {
+                        "LastUpdate" : new Date(),
                         "PlatNomor" : platNomor,
                         "Trayek": {
                             "Nama": trayek,
