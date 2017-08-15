@@ -2,7 +2,7 @@ const app = require('../app');
 const moment = require('moment');
 let database = app.db;
 let postCollection = database.collection('tb_post_angkot');
-
+let converter = require('../utilities/converter');
 /** buat laporan **/
 createPost = (query) =>{
   return new Promise(async(resolve, reject) =>{
@@ -28,6 +28,9 @@ getPosts = () =>{
                     tanggal : { $gte : new Date(dateNow)}
                 }
             ).toArray();
+            for(let i = 0; i < response.length; i++){
+                response[i]['tanggal'] = converter.convertISODateToString(response[i]['tanggal']);
+            }
             resolve(response);
         }catch (err){
             console.log(err);
