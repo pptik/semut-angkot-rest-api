@@ -153,7 +153,7 @@ getAngkotLocation = () => {
            if(err)reject(err);
            else {
                for(let i = 0; i < results.length; i++){
-                   converter.convertISODateToString(results[i]['Angkot']['LastUpdate']);
+                   results[i]['Angkot']['LastUpdate'] = converter.convertISODateToString(results[i]['Angkot']['LastUpdate']);
                }
                resolve(results);
            }
