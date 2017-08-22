@@ -7,14 +7,14 @@ let trayekCollection = database.collection('tb_angkot_trayek');
 tambahPenumpang = (query) => {
     return new Promise((resolve, reject) =>{
         try{
-            let result = database.updateOne(
+            let result = trayekCollection.updateOne(
                 {
                     "TrayekID" : parseInt(query['trayek_id']),
                     "Arah.Flag" : parseInt(query['flag'])
                 },
                 {
                     $inc : {
-                        "Arah.$.JumlahPenunggu" : parseInt(query('jumlah_penunggu'))
+                        "Arah.$.JumlahPenunggu" : parseInt(query['jumlah_penunggu'])
                     }
                 }
             );
