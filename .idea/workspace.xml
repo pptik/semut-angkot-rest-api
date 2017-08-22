@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/trayek.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/trayek_model.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rmq/broadcaster.js" afterPath="$PROJECT_DIR$/rmq/broadcaster.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/trayek.js" afterPath="$PROJECT_DIR$/routes/trayek.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,24 +18,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="trayek.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/trayek.js">
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="596">
+              <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="24" />
+              <folding>
+                <element signature="e#2754#3901#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post_model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/post_model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <file leaf-file-name="trayek_model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="24" />
-              <folding>
-                <element signature="e#2754#3901#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="596">
+              <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trayek.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/trayek.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,6 +96,7 @@
         <option value="$PROJECT_DIR$/routes/posts.js" />
         <option value="$PROJECT_DIR$/models/post_model.js" />
         <option value="$PROJECT_DIR$/rmq/broadcaster.js" />
+        <option value="$PROJECT_DIR$/models/trayek_model.js" />
         <option value="$PROJECT_DIR$/routes/trayek.js" />
       </list>
     </option>
@@ -125,6 +146,11 @@
             <path>
               <item name="semut-angkot-rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="semut-angkot-rest-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semut-angkot-rest-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semut-angkot-rest-api" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="semut-angkot-rest-api" type="b2602c69:ProjectViewProjectNode" />
@@ -195,14 +221,7 @@
       <workItem from="1502825706291" duration="57000" />
       <workItem from="1502826079124" duration="1109000" />
       <workItem from="1502980813372" duration="61000" />
-      <workItem from="1503380392829" duration="852000" />
-    </task>
-    <task id="LOCAL-00003" summary="change lang level to ecma 6">
-      <created>1502168181779</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1502168181779</updated>
+      <workItem from="1503380392829" duration="2387000" />
     </task>
     <task id="LOCAL-00004" summary="mongodb pool">
       <created>1502175873736</created>
@@ -540,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502826587374</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="trayek routes">
+      <created>1503381271456</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1503381271456</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62038000" />
+    <option name="totallyTimeSpent" value="63573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -595,7 +621,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update lokasi angkot" />
     <MESSAGE value="broadcast angkot ok" />
     <MESSAGE value="query broadcast ok" />
     <MESSAGE value="test receive" />
@@ -620,20 +645,14 @@
     <MESSAGE value="post date with machine time" />
     <MESSAGE value="fix post query by date" />
     <MESSAGE value="convert isodate to str" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert isodate to str" />
+    <MESSAGE value="trayek routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="trayek routes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rmq/connection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -968,14 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/post_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -984,9 +995,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/post_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="596">
           <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="24" />
           <folding>
             <element signature="e#2754#3901#0" expanded="false" />
@@ -994,10 +1013,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/trayek.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="375">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding />
         </state>
       </provider>
