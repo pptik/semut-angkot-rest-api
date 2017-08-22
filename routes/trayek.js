@@ -27,6 +27,35 @@ router.post('/tambah-penumpang', async(req, res) => {
 });
 
 
+router.post('/get-penumpang', async(req, res) => {
+    let session_id = req.body['session_id'];
+    let trayekID = req.body['trayek_id'];
+    if(session_id === undefined || trayekID === undefined){
+        res.status(200).send(commonMsg.body_body_empty);
+    }else {
+        try {
+            let profile = await usrModel.checkSession(session_id);
+            if(profile === null) res.status(200).send(commonMsg.session_invalid);
+            else {
+                let result = await trayekModel.getPenumpang(req.body);
+                res.status(200).send(
+                    {
+                        success: true,
+                        code : '000',
+                        message: 'Berhasil menambahkan penunggu',
+                        data : result
+                    }
+                );
+            }
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
+    }
+});
+
+
+
 
 
 module.exports = router;

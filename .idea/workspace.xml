@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/trayek_model.js" afterPath="$PROJECT_DIR$/models/trayek_model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/trayek.js" afterPath="$PROJECT_DIR$/routes/trayek.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,21 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trayek_model.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trayek_model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+            <state relative-caret-position="237">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trayek.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="trayek.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/trayek.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="412">
+              <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -105,8 +105,8 @@
         <option value="$PROJECT_DIR$/models/post_model.js" />
         <option value="$PROJECT_DIR$/rmq/broadcaster.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/trayek.js" />
         <option value="$PROJECT_DIR$/models/trayek_model.js" />
+        <option value="$PROJECT_DIR$/routes/trayek.js" />
       </list>
     </option>
   </component>
@@ -230,14 +230,7 @@
       <workItem from="1502825706291" duration="57000" />
       <workItem from="1502826079124" duration="1109000" />
       <workItem from="1502980813372" duration="61000" />
-      <workItem from="1503380392829" duration="3427000" />
-    </task>
-    <task id="LOCAL-00006" summary="export model">
-      <created>1502259958955</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1502259958955</updated>
+      <workItem from="1503380392829" duration="3596000" />
     </task>
     <task id="LOCAL-00007" summary="common response">
       <created>1502263281637</created>
@@ -575,11 +568,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503383321553</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="get penumpang">
+      <created>1503383836775</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1503383836775</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64613000" />
+    <option name="totallyTimeSpent" value="64782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -630,7 +630,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test receive" />
     <MESSAGE value="update location query" />
     <MESSAGE value="update log msg" />
     <MESSAGE value="post model" />
@@ -655,7 +654,8 @@
     <MESSAGE value="trayek routes" />
     <MESSAGE value="tambah jumlah penumpang" />
     <MESSAGE value="tambah penumpang test ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="tambah penumpang test ok" />
+    <MESSAGE value="get penumpang" />
+    <option name="LAST_COMMIT_MESSAGE" value="get penumpang" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1022,18 +1022,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/trayek.js">
+    <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="237">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
+    <entry file="file://$PROJECT_DIR$/routes/trayek.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+        <state relative-caret-position="412">
+          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
           <folding />
         </state>
       </provider>
