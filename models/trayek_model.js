@@ -25,6 +25,24 @@ tambahPenumpang = (query) => {
     });
 };
 
+
+/** get penumpang **/
+getPenumpang = (query) =>{
+  return new Promise(async(resolve, reject) =>{
+     try {
+         let result = await trayekCollection.find({
+             "TrayekID" : parseInt(query['trayek_id'])
+         }).toArray();
+         resolve(result);
+     }catch (err){
+         reject(err);
+     }
+  });
+};
+
+
+
 module.exports = {
-    tambahPenumpang:tambahPenumpang
+    tambahPenumpang:tambahPenumpang,
+    getPenumpang:getPenumpang
 };
