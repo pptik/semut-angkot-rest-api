@@ -13,12 +13,9 @@ broadcastAngkot = async(connection) => {
         setInterval(async function () {
             let test = {test : "test"}.toString();
             let dataAngkot = await userModel.getAngkotLocation();
-         //   console.log(dataAngkot);
             let dataPost = await postModel.getPosts();
-          //  console.log(dataPost);
             let msg = {angkot : dataAngkot, laporan : dataPost};
             msg = JSON.stringify(msg);
-           // console.log(msg);
             await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(msg));
         }, 1500);
     }catch (err){
