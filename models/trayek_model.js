@@ -41,8 +41,22 @@ getPenumpang = (query) =>{
 };
 
 
+/** get trayek **/
+getTrayek = () =>{
+    return new Promise(async(resolve, reject)=>{
+        try{
+            let result = await trayekCollection.find({}).toArray();
+            resolve(result);
+        }catch (err){
+            reject(err);
+        }
+    });
+};
+
+
 
 module.exports = {
     tambahPenumpang:tambahPenumpang,
-    getPenumpang:getPenumpang
+    getPenumpang:getPenumpang,
+    getTrayek:getTrayek
 };

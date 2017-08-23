@@ -56,6 +56,23 @@ router.post('/get-penumpang', async(req, res) => {
 
 
 
+router.post('/get-trayek', async(req, res) => {
+    try {
+        let trayek = await trayekModel.getTrayek();
+        res.status(200).send(
+            {
+                success: true,
+                code : '000',
+                message: 'Berhasil memuat permintaan',
+                data : trayek
+            }
+        );
+    }catch (err){
+        console.log(err);
+        res.status(200).send(commonMsg.service_not_responding);
+    }
+});
+
 
 
 module.exports = router;
