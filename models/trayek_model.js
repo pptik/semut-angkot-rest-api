@@ -30,15 +30,39 @@ tambahPenumpang = (query) => {
 /** get penumpang **/
 getPenumpang = (query) =>{
   return new Promise(async(resolve, reject) =>{
+
+      let x = new Date().getTime() - 1000 * 60 * 30;
+     // console.log(x);
+      //console.log(new Date(x));
      try {
          let result = await trayekCollection.find({
              "TrayekID" : parseInt(query['trayek_id'])
          }).toArray();
-         let penumpang = await penumpangCollection.find({
-             "trayek_id" : parseInt(query['trayek_id'])
+         let penumpang_forward_flag = await penumpangCollection.find({
+             "trayek_id" : parseInt(query['trayek_id']),
+             "flag" : 0,
+             "time": {
+                 $gte : new Date(new Date().getTime() - 1000 * 60 * 30)
+             }
          }).toArray();
-         console.log(penumpang);
-         result['test'] = penumpang;
+         let penumpang_backward_flag = await penumpangCollection.find({
+             "trayek_id" : parseInt(query['trayek_id']),
+             "flag" : 1,
+             "time": {
+                 $gte : new Date(new Date().getTime() - 1000 * 60 * 30)
+             }
+         }).toArray();
+         result = result[0];
+         let forward_flag_count = 0;
+         for(let i = 0; i < penumpang_forward_flag.length; i++){
+             forward_flag_count += penumpang_forward_flag[i]['jumlah_penunggu'];
+         }
+         let backward_flag_count = 0;
+         for(let i = 0; i < penumpang_backward_flag.length; i++){
+             backward_flag_count += penumpang_backward_flag[i]['jumlah_penunggu'];
+         }
+         result['Arah'][0]['JumlahPenunggu'] = forward_flag_count;
+         result['Arah'][1]['JumlahPenunggu'] = backward_flag_count;
          resolve(result);
      }catch (err){
          reject(err);

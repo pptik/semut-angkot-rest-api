@@ -45,7 +45,7 @@ router.post('/get-penumpang', async(req, res) => {
                         success: true,
                         code : '000',
                         message: 'Berhasil menambahkan penunggu',
-                        data : result[0]
+                        data : result
                     }
                 );
             }
