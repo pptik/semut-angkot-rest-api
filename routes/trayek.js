@@ -3,6 +3,7 @@ const router = express.Router();
 const usrModel = require('../models/user_model');
 const trayekModel = require('../models/trayek_model');
 const commonMsg = require('../configs/common_messages.json');
+const penumpangModel = require('../models/penumpang_model');
 
 router.post('/tambah-penumpang', async(req, res) => {
     let session_id = req.body['session_id'];
@@ -16,8 +17,9 @@ router.post('/tambah-penumpang', async(req, res) => {
             let profile = await usrModel.checkSession(session_id);
             if(profile === null) res.status(200).send(commonMsg.session_invalid);
             else {
-                await trayekModel.tambahPenumpang(req.body);
-                res.status(200).send({success: true, code : '000', message: 'Berhasil menambahkan penunggu'});
+                //await trayekModel.tambahPenumpang(req.body);
+                let result = await penumpangModel.insertPenumpang(req.body);
+                res.status(200).send({success: true, code : '000', message: 'Berhasil menambahkan penunggu', object_id: result});
             }
         }catch (err){
             console.log(err);
