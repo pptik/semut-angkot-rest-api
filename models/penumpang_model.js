@@ -8,6 +8,9 @@ let trayekCollection = database.collection('tb_angkot_penumpang');
 insertPenumpang = (query) => {
   return new Promise( async(resolve, reject) => {
       query['time'] = new Date();
+      query['trayek_id'] = parseInt(query['trayek_id']);
+      query['flag'] = parseInt(query['flag']);
+      query['jumlah_penunggu'] = parseInt(query['jumlah_penunggu']);
       try {
           let result = await trayekCollection.insert(query);
          // console.log(result);
