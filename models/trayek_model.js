@@ -27,13 +27,12 @@ tambahPenumpang = (query) => {
 };
 
 
+
+
 /** get penumpang **/
 getPenumpang = (query) =>{
   return new Promise(async(resolve, reject) =>{
 
-      let x = new Date().getTime() - 1000 * 60 * 30;
-     // console.log(x);
-      //console.log(new Date(x));
      try {
          let result = await trayekCollection.find({
              "TrayekID" : parseInt(query['trayek_id'])

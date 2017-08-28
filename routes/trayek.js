@@ -17,9 +17,30 @@ router.post('/tambah-penumpang', async(req, res) => {
             let profile = await usrModel.checkSession(session_id);
             if(profile === null) res.status(200).send(commonMsg.session_invalid);
             else {
-                //await trayekModel.tambahPenumpang(req.body);
                 let result = await penumpangModel.insertPenumpang(req.body);
                 res.status(200).send({success: true, code : '000', message: 'Berhasil menambahkan penunggu', object_id: result});
+            }
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
+    }
+});
+
+
+
+router.post('/update-penumpang', async(req, res) => {
+    let session_id = req.body['session_id'];
+    let object_id = req.body['object_id'];
+    if(session_id === undefined || object_id === undefined){
+        res.status(200).send(commonMsg.body_body_empty);
+    }else {
+        try {
+            let profile = await usrModel.checkSession(session_id);
+            if(profile === null) res.status(200).send(commonMsg.session_invalid);
+            else {
+                await penumpangModel.updateStatusPenumpang(req.body);
+                res.status(200).send({success: true, code : '000', message: 'Berhasil update penumpang'});
             }
         }catch (err){
             console.log(err);
