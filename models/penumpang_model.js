@@ -24,6 +24,25 @@ updateStatusPenumpang = (query) =>{
 };
 
 
+/** cek status penumpang **/
+checkStatusPenumpang = (query) =>{
+  return new Promise(async(resolve, reject) =>{
+      try{
+          let result = await penumpangCollection.find({
+              "_id" : new ObjectId(query['object_id']),
+              "time": {
+                  $gte : new Date(new Date().getTime() - 1000 * 60 * 30)
+              }
+          }).toArray();
+          console.log(result);
+          resolve(result);
+      }catch (err){
+          console.log(err);
+          reject(err);
+      }
+  });
+};
+
 
 insertPenumpang = (query) => {
   return new Promise( async(resolve, reject) => {
@@ -45,5 +64,6 @@ insertPenumpang = (query) => {
 
 module.exports = {
     insertPenumpang: insertPenumpang,
-    updateStatusPenumpang:updateStatusPenumpang
+    updateStatusPenumpang:updateStatusPenumpang,
+    checkStatusPenumpang:checkStatusPenumpang
 };
