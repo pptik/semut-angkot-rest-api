@@ -34,7 +34,7 @@ checkStatusPenumpang = (query) =>{
                   $gte : new Date(new Date().getTime() - 1000 * 60 * 30)
               }
           }).toArray();
-          console.log(result);
+         // console.log(result);
           resolve(result);
       }catch (err){
           console.log(err);

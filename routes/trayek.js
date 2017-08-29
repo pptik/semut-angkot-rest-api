@@ -61,8 +61,8 @@ router.post('/check-penumpang', async(req, res) => {
             let profile = await usrModel.checkSession(session_id);
             if(profile === null) res.status(200).send(commonMsg.session_invalid);
             else {
-                await penumpangModel.checkStatusPenumpang(req.body);
-                res.status(200).send({success: true, code : '000', message: 'Berhasil update penumpang'});
+                let result = await penumpangModel.checkStatusPenumpang(req.body);
+                res.status(200).send({success: true, code : '000', message: 'Berhasil memuat permintaan', data: result});
             }
         }catch (err){
             console.log(err);
