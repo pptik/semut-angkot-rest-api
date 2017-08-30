@@ -123,7 +123,7 @@ router.post('/get-trayek', async(req, res) => {
  * menyimpan data lokasi penumpang
  * saat naik dan turun
  */
-router.post('log-penumpang-state', async (req, res) => {
+router.post('/log-penumpang-state', async (req, res) => {
     let session_id = req.body['session_id'];
     let trayek_id = req.body['trayek_id'];
     let state = req.body['state']; // 1: Naik 0:Turun

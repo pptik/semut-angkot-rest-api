@@ -62,21 +62,26 @@ insertPenumpang = (query) => {
   });
 };
 
-insertLogPenumpang = (req) => {
+insertLogPenumpang = (query) => {
     return new Promise(async(resolve, reject) => {
-        query['trayek_id'] = parseInt(req['trayek_id']);
-        query['state'] = parseInt(req['state']);
-        query['longitude'] = req['longitude'];
-        query['latitude'] = req['latitude'];
+        let trayek_id = parseInt(query['trayek_id']);
+        let state = parseInt(query['state']);
+        let longitude = query['longitude'];
+        let latitude = query['latitude'];
+		let logQuery = {
+			"trayek_id" : trayek_id,
+			"state" : state,
+			"longitude" : longitude,
+			"latitude" : latitude
+		}
         try{
-            let result = await logPenumppangCollection.insert(query);
+            let result = await logPenumppangCollection.insertOne(logQuery);
             resolve(result);
         }catch(err){
             reject(err);
         }
     });
 };
-
 
 module.exports = {
     insertPenumpang: insertPenumpang,
