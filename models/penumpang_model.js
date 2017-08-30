@@ -72,7 +72,8 @@ insertLogPenumpang = (query) => {
 			"trayek_id" : trayek_id,
 			"state" : state,
 			"longitude" : longitude,
-			"latitude" : latitude
+			"latitude" : latitude,
+			"datetime" : new Date()
 		}
         try{
             let result = await logPenumppangCollection.insertOne(logQuery);
