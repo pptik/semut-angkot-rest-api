@@ -3,6 +3,7 @@ const moment = require('moment');
 let ObjectId = require('mongodb').ObjectId;
 let database = app.db;
 let penumpangCollection = database.collection('tb_angkot_penumpang');
+let logPenumppangCollection = database.collection('tb_angkot_log_penumpang');
 
 
 /** update status penumpang **/
@@ -61,9 +62,25 @@ insertPenumpang = (query) => {
   });
 };
 
+insertLogPenumpang = (req) => {
+    return new Promise(async(resolve, reject) => {
+        query['trayek_id'] = parseInt(req['trayek_id']);
+        query['state'] = parseInt(req['state']);
+        query['longitude'] = req['longitude'];
+        query['latitude'] = req['latitude'];
+        try{
+            let result = await logPenumppangCollection.insert(query);
+            resolve(result);
+        }catch(err){
+            reject(err);
+        }
+    });
+};
+
 
 module.exports = {
     insertPenumpang: insertPenumpang,
     updateStatusPenumpang:updateStatusPenumpang,
-    checkStatusPenumpang:checkStatusPenumpang
+    checkStatusPenumpang:checkStatusPenumpang,
+    insertLogPenumpang: insertLogPenumpang
 };
