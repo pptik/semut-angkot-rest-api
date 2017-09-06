@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model.js" afterPath="$PROJECT_DIR$/models/user_model.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="user_model.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/user_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="153" column="40" lean-forward="true" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+            <state relative-caret-position="407">
+              <caret line="156" column="55" lean-forward="true" selection-start-line="156" selection-start-column="55" selection-end-line="156" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -227,14 +226,7 @@
       <workItem from="1503985730377" duration="4045000" />
       <workItem from="1503991109509" duration="235000" />
       <workItem from="1504070468985" duration="23000" />
-      <workItem from="1504671828665" duration="993000" />
-    </task>
-    <task id="LOCAL-00017" summary="test publish">
-      <created>1502687478667</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1502687478667</updated>
+      <workItem from="1504671828665" duration="1113000" />
     </task>
     <task id="LOCAL-00018" summary="insert user">
       <created>1502688386104</created>
@@ -572,11 +564,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503991200649</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="angkot query by day">
+      <created>1504672843853</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1504672843853</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80261000" />
+    <option name="totallyTimeSpent" value="80381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -627,7 +626,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="session checker" />
     <MESSAGE value="fix typo" />
     <MESSAGE value="fix updateone query" />
     <MESSAGE value="break cross origin" />
@@ -652,7 +650,8 @@
     <MESSAGE value="update jumlah penumpang" />
     <MESSAGE value="check status penumpang" />
     <MESSAGE value="passing result to response" />
-    <option name="LAST_COMMIT_MESSAGE" value="passing result to response" />
+    <MESSAGE value="angkot query by day" />
+    <option name="LAST_COMMIT_MESSAGE" value="angkot query by day" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1007,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user_model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="153" column="40" lean-forward="true" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+        <state relative-caret-position="407">
+          <caret line="156" column="55" lean-forward="true" selection-start-line="156" selection-start-column="55" selection-end-line="156" selection-end-column="55" />
           <folding />
         </state>
       </provider>
