@@ -119,5 +119,36 @@ router.post('/get-trayek', async(req, res) => {
 });
 
 
+/**
+ * menyimpan data lokasi penumpang
+ * saat naik dan turun
+ */
+router.post('/log-penumpang-state', async (req, res) => {
+    let session_id = req.body['session_id'];
+    let trayek_id = req.body['trayek_id'];
+    let state = req.body['state']; // 1: Naik 0:Turun
+    let longitude = req.body['longitude'];
+    let latitude = req.body['latitude'];
+
+    if (session_id === undefined
+        || trayek_id === undefined
+        || state === undefined
+        || longitude === undefined
+        || latitude === undefined) {
+        res.status(200).send(commonMsg.body_body_empty);
+    } else {
+        try {
+            let profile = await usrModel.checkSession(session_id);
+            if (profile === null) res.status(200).send(commonMsg.session_invalid);
+            else {
+                let result = await penumpangModel.insertLogPenumpang(req.body);
+                res.status(200).send({ success: true, code: '000', message: 'Berhasil', data: result });
+            }
+        } catch (err) {
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
+    }
+});
 
 module.exports = router;
