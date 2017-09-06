@@ -149,7 +149,7 @@ getAngkotLocation = () => {
                     { ID_role: 20 },
                     { Angkot: { $exists: true } },
                     {"Angkot.location.coordinates": {$ne: [0,0] }},
-                    {LastUpdate : { $gte : new Date(dateNow)}}
+                    {"Angkot.LastUpdate" : { $gte : new Date(dateNow)}}
                 ] }
             ).toArray((err, results) =>{
            if(err)reject(err);
