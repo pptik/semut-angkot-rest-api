@@ -142,12 +142,14 @@ checkSession = (sessid) => {
 /** get angkot location**/
 getAngkotLocation = () => {
     return new Promise((resolve, reject) => {
+        let dateNow = moment().format("YYYY-MM-DD")+" 00:00:00";
         userCollection.find(
             { $and:
                 [
                     { ID_role: 20 },
                     { Angkot: { $exists: true } },
-                    {"Angkot.location.coordinates": {$ne: [0,0] }}
+                    {"Angkot.location.coordinates": {$ne: [0,0] }},
+                    {LastUpdate : { $gte : new Date(dateNow)}}
                 ] }
             ).toArray((err, results) =>{
            if(err)reject(err);
