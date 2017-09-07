@@ -104,7 +104,8 @@ updateUserLocation = (query) => {
           {
               'Angkot.location.coordinates' : [query['longitude'], query['latitude']],
               'Angkot.JumlahPenumpang' : query['jumlah_penumpang'],
-              'Angkot.LastUpdate' : new Date(query['time'])
+              //'Angkot.LastUpdate' : new Date(query['time'])
+              'Angkot.LastUpdate' : new Date()
               /*Angkot : {
                   location:
                       {
