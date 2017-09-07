@@ -68,11 +68,10 @@ insertLogPenumpang = (query) => {
         let state = parseInt(query['state']);
         let longitude = query['longitude'];
         let latitude = query['latitude'];
+		let no_angkot = "N/A";
 		
 		if(query['plat_nomor'] !== undefined)		
-			let no_angkot = query['plat_nomor'];
-		else 
-			let no_angkot = 'N/A';
+			no_angkot = query['plat_nomor'];
 		
 		let logQuery = {
 			"trayek_id" : trayek_id,
