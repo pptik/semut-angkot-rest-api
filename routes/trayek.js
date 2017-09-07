@@ -141,6 +141,10 @@ router.post('/log-penumpang-state', async (req, res) => {
             let profile = await usrModel.checkSession(session_id);
             if (profile === null) res.status(200).send(commonMsg.session_invalid);
             else {
+				let angkot = await usrModel.getDataAngkotBySession(session_id);
+				if(angkot !== null){
+					req.body['plat_nomor'] = angkot.PlatNomor;
+				}
                 let result = await penumpangModel.insertLogPenumpang(req.body);
                 res.status(200).send({ success: true, code: '000', message: 'Berhasil', data: result });
             }

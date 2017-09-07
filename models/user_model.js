@@ -427,7 +427,27 @@ insertUser = (query) => {
     });
 };
 
-
+/* get data angkot by session */
+getDataAngkotBySession = (sessid) => {
+    return new Promise((resolve, reject) =>{
+        sessionCollection.find({ID: sessid, "EndTime": "0000-00-00 00:00:00"})
+            .toArray((err, results) => {
+            if (err) reject(err);
+            else
+                if(results[0]) {
+                    userCollection.find({ID: results[0].UserID})
+                        .toArray((err, ress) => {
+                        if(err)reject(err);
+                        else resolve(
+                            {
+                                PlatNomor: ress[0].Angkot.PlatNomor,
+                                Trayek: ress[0].Angkot.Trayek
+                            });
+                    });
+                }else resolve(null);
+        });
+    });
+};
 
 module.exports = {
     findEmail:findEmail,
@@ -444,5 +464,6 @@ module.exports = {
     findPlatNomor:findPlatNomor,
     insertUser:insertUser,
     updateUserLocation:updateUserLocation,
-    getAngkotLocation:getAngkotLocation
+    getAngkotLocation:getAngkotLocation,
+	getDataAngkotBySession: getDataAngkotBySession
 };
