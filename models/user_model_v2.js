@@ -10,6 +10,7 @@ const AVAILABLE_STRATEGIES = {
     GOOGLE : "google"
 };
 let axios = require('axios');
+let profileUtils = require('../utilities/profile_utils');
 
 
 /** insert user V2 **/
@@ -39,18 +40,20 @@ login = (query) => {
           let strategy = query['Strategy'];
           let invalid;
           let tokenResult;
+          let userPropic;
           switch (strategy){
               case AVAILABLE_STRATEGIES.FACEBOOK:
                   tokenResult = await axios.get(FACEBOOK_TOKEN_CHECKER_URI+query['Token']);
                   tokenResult = JSON.stringify(tokenResult);
                   console.log(tokenResult);
                   invalid = (tokenResult.hasOwnProperty('error'));
+                  if(!invalid) userPropic = profileUtils.facebookProfic(query['id']);
                   break;
               case AVAILABLE_STRATEGIES.GOOGLE:
-                  tokenResult = await axios.get(GOOGLE_TOKEN_CHECKER_URI+query['Token']);
+                  tokenResult = await profileUtils.validateGoogleToken(query['Token']);
                   tokenResult = JSON.stringify(tokenResult);
                   console.log(tokenResult);
-                  invalid = (tokenResult.hasOwnProperty('error_description'));
+                  invalid = (tokenResult.hasOwnProperty('failed'));
                   break;
           }
           if(invalid)resolve(false);
