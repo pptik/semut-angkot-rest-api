@@ -296,6 +296,8 @@ insertUser = (query) => {
 };
 
 
+
+
 /** insert user angkot**/
 insertUserAngkot = (query) => {
     return new Promise((resolve, reject) =>{
@@ -448,6 +450,13 @@ getDataAngkotBySession = (sessid) => {
         });
     });
 };
+
+
+
+
+
+
+
 
 module.exports = {
     findEmail:findEmail,
