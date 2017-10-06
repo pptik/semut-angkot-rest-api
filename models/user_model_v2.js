@@ -9,7 +9,8 @@ const AVAILABLE_STRATEGIES = {
     FACEBOOK : "facebook",
     GOOGLE : "google"
 };
-let axios = require('axios');
+
+const requisition = require('requisition');
 let profileUtils = require('../utilities/profile_utils');
 
 
@@ -22,7 +23,8 @@ insertUserV2 = (query) =>{
             "Version" : 2,
             "Email" : query['Email'],
             "Strategies" : strategies,
-            "CreatedAt" : new Date()
+            "CreatedAt" : new Date(),
+            "CheckPoint" : 1
         };
         try{
             let result = await userCollection.insertOne(user);
@@ -34,18 +36,19 @@ insertUserV2 = (query) =>{
 };
 
 /** Login **/
-login = (query) => {
+loginv2 = (query) => {
   return new Promise(async(resolve, reject) => {
       try {
           let strategy = query['Strategy'];
           let invalid;
-          let tokenResult;
+          let tokenResult = {};
           let userPropic;
           switch (strategy){
               case AVAILABLE_STRATEGIES.FACEBOOK:
-                  tokenResult = await axios.get(FACEBOOK_TOKEN_CHECKER_URI+query['Token']);
-                  tokenResult = JSON.stringify(tokenResult);
-                  console.log(tokenResult);
+                  console.log(strategy);
+                  tokenResult = await requisition('https://graph.facebook.com/app?access_token='+query['Token']);
+                  tokenResult = await tokenResult.json();
+                  //console.log(tokenResult);
                   invalid = (tokenResult.hasOwnProperty('error'));
                   if(!invalid) userPropic = profileUtils.facebookProfic(query['id']);
                   break;
@@ -58,9 +61,10 @@ login = (query) => {
           }
           if(invalid)resolve(false);
           else {
-              let users = await userCollection.find({
+              /*let users = await userCollection.find({
                   "Email": query['Email']
-              }).toArray();
+              }).toArray();*/
+              resolve(tokenResult);
           }
       }catch (err){
           reject(err);
@@ -70,5 +74,6 @@ login = (query) => {
 
 
 module.exports = {
-    insertUserV2:insertUserV2
+    insertUserV2:insertUserV2,
+    loginv2:loginv2
 };
