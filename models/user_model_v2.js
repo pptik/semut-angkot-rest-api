@@ -18,17 +18,21 @@ let profileUtils = require('../utilities/profile_utils');
 insertUserV2 = (query) =>{
     return new Promise(async(resolve, reject) =>{
         let strategies = [];
-        strategies.push(query['strategy']);
+        strategies.push(query['Strategy']);
         let user = {
             "Version" : 2,
             "Email" : query['Email'],
             "Strategies" : strategies,
             "CreatedAt" : new Date(),
-            "CheckPoint" : 1
+            "Profile" : {
+                "CheckPoint" : 1,
+                "Picture" : query['Image'],
+                "DisplayName" : query['Name']
+            }
         };
         try{
             let result = await userCollection.insertOne(user);
-            resolve(result);
+            resolve(result["ops"][0]);
         }catch (err){
             reject(err);
         }
@@ -48,23 +52,36 @@ loginv2 = (query) => {
                   console.log(strategy);
                   tokenResult = await requisition('https://graph.facebook.com/me?access_token='+query['Token']);
                   tokenResult = await tokenResult.json();
-                  //console.log(tokenResult);
                   invalid = (tokenResult.hasOwnProperty('error'));
                   if(!invalid) userPropic = profileUtils.facebookProfic(tokenResult['id']);
                   break;
               case AVAILABLE_STRATEGIES.GOOGLE:
                   /* gplus api not store access_token */
-                  tokenResult = await profileUtils.validateGoogleToken(query['Token']);
-                  tokenResult = JSON.stringify(tokenResult);
-                  console.log(tokenResult);
-                  invalid = (tokenResult.hasOwnProperty('failed'));
+
                   break;
           }
           if(invalid)resolve(false);
           else {
-              /*let users = await userCollection.find({
-                  "Email": query['Email']
-              }).toArray();*/
+              let users = await userCollection.find({
+                  "Version": 2,
+                  "Email": query['Email'],
+                  "Profile.CheckPoint": 1
+              }).toArray();
+              if(users.length > 0){
+                  resolve(users[0]);
+              }else {
+                  switch (strategy){
+                      case AVAILABLE_STRATEGIES.FACEBOOK:
+                          query['Image'] = profileUtils.facebookProfic(query['id']);
+                          break;
+                      case AVAILABLE_STRATEGIES.GOOGLE:
+                          query['Image'] = await profileUtils.gplusProfic(query['id']);
+                          break;
+                  }
+                  users = await insertUserV2(query);
+                  resolve(users);
+              }
+
               resolve(tokenResult);
           }
       }catch (err){
