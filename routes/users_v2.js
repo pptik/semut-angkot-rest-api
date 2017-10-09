@@ -14,7 +14,7 @@ router.post('/login', async(req, res) => {
             if(resp === false) res.status(200).send(commonMessage.session_invalid);
             else res.status(200).send(
                 {
-                    success: false,
+                    success: true,
                     code: "000",
                     message: "Login berhasil",
                     Profile:resp
@@ -32,7 +32,7 @@ router.post('/status', async(req, res) =>{
        try {
            let status = await userModel.checkToken(req.body['Token']);
            if (status === false) res.status(200).send(commonMessage.session_invalid);
-           else res.status(200).send({success: false, code: "000", message: "Token status valid"});
+           else res.status(200).send({success: true, code: "000", message: "Token status valid"});
        }catch (err) {
            res.status(200).send(commonMessage.service_not_responding);
        }
@@ -44,7 +44,7 @@ router.post('/logout', async(req, res) =>{
     if(bodyChecker.check(['Token'], req.body)){
         try {
             await userModel.logout(req.body['Token']);
-            res.status(200).send({success: false, code: "000", message: "Logout berhasil"});
+            res.status(200).send({success: true, code: "000", message: "Logout berhasil"});
         }catch (err){
             res.status(200).send(commonMessage.service_not_responding);
         }

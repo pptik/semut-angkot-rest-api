@@ -67,6 +67,7 @@ createToken = async(_id) => {
                 }
             );
             tokenDetail = tokenDetail['ops'][0];
+            console.log(tokenDetail);
             resolve(tokenDetail['Token']);
         }catch (err){
             reject(err);
@@ -137,7 +138,11 @@ loginv2 = (query) => {
                   "Profile.CheckPoint": 1
               }).toArray();
               if(users.length > 0){
-                  resolve(users[0]);
+                 // users = await insertUserV2(query);
+                  users = users[0];
+                  console.log(users);
+                  users['Token'] = await createToken(users['_id']);
+                  resolve(users);
               }else {
                   switch (strategy){
                       case AVAILABLE_STRATEGIES.FACEBOOK:

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model_v2.js" afterPath="$PROJECT_DIR$/models/user_model_v2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users_v2.js" afterPath="$PROJECT_DIR$/routes/users_v2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+            <state relative-caret-position="232">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -56,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_model_v2.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_model_v2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1907">
-              <caret line="167" column="17" lean-forward="false" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
+            <state relative-caret-position="2900">
+              <caret line="140" column="19" lean-forward="false" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -441,14 +443,7 @@
       <workItem from="1504795634108" duration="13000" />
       <workItem from="1507217708803" duration="7825000" />
       <workItem from="1507301071061" duration="9794000" />
-      <workItem from="1507507238840" duration="8869000" />
-    </task>
-    <task id="LOCAL-00027" summary="update location query">
-      <created>1502719935374</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1502719935374</updated>
+      <workItem from="1507507238840" duration="10079000" />
     </task>
     <task id="LOCAL-00028" summary="update log msg">
       <created>1502720672907</created>
@@ -786,11 +781,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507533660465</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="token status, logout">
+      <created>1507547606634</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1507547606634</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109292000" />
+    <option name="totallyTimeSpent" value="110502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1220,18 +1222,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
+    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+        <state relative-caret-position="2900">
+          <caret line="140" column="19" lean-forward="false" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
+    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1907">
-          <caret line="167" column="17" lean-forward="false" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
+        <state relative-caret-position="232">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding />
         </state>
       </provider>
