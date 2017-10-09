@@ -2,9 +2,10 @@ const app = require('../app');
 const moment = require('moment');
 let database = app.db;
 let userCollection = database.collection('tb_user');
-const https = require('https');
-const FACEBOOK_TOKEN_CHECKER_URI = "https://graph.facebook.com/app?access_token=";
-const GOOGLE_TOKEN_CHECKER_URI = "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=";
+let tokenCollection = database.collection('tb_token');
+const md5 = require('md5');
+
+
 const AVAILABLE_STRATEGIES = {
     FACEBOOK : "facebook",
     GOOGLE : "google"
@@ -37,6 +38,74 @@ insertUserV2 = (query) =>{
             reject(err);
         }
     });
+};
+
+/** generate token **/
+createToken = async(_id) => {
+    return new Promise(async(resolve, reject) =>{
+        try {
+            let tokens = await tokenCollection.find({
+                "UserID" : _id,
+                "EndTime": "0000-00-00 00:00:00"
+            }).toArray();
+            if(tokens.length > 0){
+                for(let i =0; i < tokens.length; i++){
+                    await tokenCollection.updateOne({
+                        "_id" : tokens[i]['_id']
+                    }, {$set : {
+                        EndTime : moment().format('YYYY-MM-DD HH:mm:ss')
+                    }});
+                }
+            }
+            let token = md5(_id+"-"+moment().format('YYYYMMDDHHmmss'));
+            let tokenDetail = await tokenCollection.insertOne(
+                {
+                    "UserID": _id,
+                    "StartTime": moment().format('YYYY-MM-DD HH:mm:ss'),
+                    "EndTime": "0000-00-00 00:00:00",
+                    "Token": token
+                }
+            );
+            tokenDetail = tokenDetail['ops'][0];
+            resolve(tokenDetail['Token']);
+        }catch (err){
+            reject(err);
+        }
+    });
+};
+
+
+/** check token **/
+checkToken = async(token) =>{
+  return new Promise(async (resolve, reject) =>{
+     try {
+         let resp = await tokenCollection.find({
+             "Token" : token,
+             "EndTime": "0000-00-00 00:00:00"
+         }).toArray();
+         if(resp.length > 0){
+             resolve(resp[0]['UserID']);
+         }else resolve(false);
+     }catch (err){
+         reject(err);
+     }
+  });
+};
+
+/** logout **/
+logout = async(token) =>{
+  return new Promise(async(resolve, reject) =>{
+      try {
+          await tokenCollection.updateOne({
+              "Token" : token
+          }, {$set : {
+              EndTime : moment().format('YYYY-MM-DD HH:mm:ss')
+          }});
+          resolve(true);
+      }catch (err){
+          reject(err);
+      }
+  });
 };
 
 /** Login **/
@@ -79,6 +148,7 @@ loginv2 = (query) => {
                           break;
                   }
                   users = await insertUserV2(query);
+                  users['Token'] = await createToken(users['_id']);
                   resolve(users);
               }
 
@@ -93,5 +163,7 @@ loginv2 = (query) => {
 
 module.exports = {
     insertUserV2:insertUserV2,
-    loginv2:loginv2
+    loginv2:loginv2,
+    checkToken:checkToken,
+    logout:logout
 };

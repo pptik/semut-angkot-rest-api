@@ -11,13 +11,44 @@ router.post('/login', async(req, res) => {
         try {
             console.log(req.body);
             let resp = await userModel.loginv2(req.body);
-            res.status(200).send(resp);
+            if(resp === false) res.status(200).send(commonMessage.session_invalid);
+            else res.status(200).send(
+                {
+                    success: false,
+                    code: "000",
+                    message: "Login berhasil",
+                    Profile:resp
+                });
         } catch (err) {
             console.log(err);
-            res.status(200).send(err);
+            res.status(200).send(commonMessage.service_not_responding);
         }
     }else res.status(200).send(commonMessage.body_body_empty);
 
+});
+
+router.post('/status', async(req, res) =>{
+   if(bodyChecker.check(['Token'], req.body)){
+       try {
+           let status = await userModel.checkToken(req.body['Token']);
+           if (status === false) res.status(200).send(commonMessage.session_invalid);
+           else res.status(200).send({success: false, code: "000", message: "Token status valid"});
+       }catch (err) {
+           res.status(200).send(commonMessage.service_not_responding);
+       }
+   }else res.status(200).send(commonMessage.body_body_empty);
+});
+
+
+router.post('/logout', async(req, res) =>{
+    if(bodyChecker.check(['Token'], req.body)){
+        try {
+            await userModel.logout(req.body['Token']);
+            res.status(200).send({success: false, code: "000", message: "Logout berhasil"});
+        }catch (err){
+            res.status(200).send(commonMessage.service_not_responding);
+        }
+    }else res.status(200).send(commonMessage.body_body_empty);
 });
 
 

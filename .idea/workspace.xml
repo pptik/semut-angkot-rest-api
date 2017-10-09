@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utilities/body_checker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model_v2.js" afterPath="$PROJECT_DIR$/models/user_model_v2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users_v2.js" afterPath="$PROJECT_DIR$/routes/users_v2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utilities/profile_utils.js" afterPath="$PROJECT_DIR$/utilities/profile_utils.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +21,7 @@
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-3250">
               <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="10" />
               <folding />
             </state>
@@ -43,14 +41,14 @@
       <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+            <state relative-caret-position="1125">
+              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="body_checker.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="body_checker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/body_checker.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -60,12 +58,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_model_v2.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user_model_v2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="94" />
+            <state relative-caret-position="1907">
+              <caret line="167" column="17" lean-forward="false" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user_model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="65" column="45" lean-forward="true" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
+              <folding>
+                <element signature="e#8300#10261#0" expanded="false" />
+                <element signature="e#10961#12750#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,10 +127,10 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/configs/constants.js" />
-        <option value="$PROJECT_DIR$/models/user_model_v2.js" />
         <option value="$PROJECT_DIR$/utilities/profile_utils.js" />
-        <option value="$PROJECT_DIR$/routes/users_v2.js" />
         <option value="$PROJECT_DIR$/utilities/body_checker.js" />
+        <option value="$PROJECT_DIR$/models/user_model_v2.js" />
+        <option value="$PROJECT_DIR$/routes/users_v2.js" />
       </list>
     </option>
   </component>
@@ -279,14 +290,7 @@
       <workItem from="1504795634108" duration="13000" />
       <workItem from="1507217708803" duration="7825000" />
       <workItem from="1507301071061" duration="9794000" />
-      <workItem from="1507507238840" duration="4748000" />
-    </task>
-    <task id="LOCAL-00025" summary="test receive">
-      <created>1502705028055</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1502705028055</updated>
+      <workItem from="1507507238840" duration="8785000" />
     </task>
     <task id="LOCAL-00026" summary="update location query">
       <created>1502719818180</created>
@@ -624,11 +628,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507508939406</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="request body checker">
+      <created>1507512219522</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1507512219522</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105171000" />
+    <option name="totallyTimeSpent" value="109208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -679,7 +690,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="convert iso date to string" />
     <MESSAGE value="fix invalid session post" />
     <MESSAGE value="post date with machine time" />
     <MESSAGE value="fix post query by date" />
@@ -704,7 +714,8 @@
     <MESSAGE value="verify login strategies" />
     <MESSAGE value="kick axios, replace with requisition" />
     <MESSAGE value="init constant" />
-    <option name="LAST_COMMIT_MESSAGE" value="init constant" />
+    <MESSAGE value="request body checker" />
+    <option name="LAST_COMMIT_MESSAGE" value="request body checker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -999,21 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8729">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1925">
@@ -1046,26 +1042,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
+    <entry file="file://$PROJECT_DIR$/utilities/body_checker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="94" />
+        <state relative-caret-position="75">
+          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3250">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="65" column="45" lean-forward="true" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
+          <folding>
+            <element signature="e#8300#10261#0" expanded="false" />
+            <element signature="e#10961#12750#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        <state relative-caret-position="1125">
+          <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/body_checker.js">
+    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        <state relative-caret-position="1907">
+          <caret line="167" column="17" lean-forward="false" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
           <folding />
         </state>
       </provider>
