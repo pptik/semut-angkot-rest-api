@@ -77,10 +77,12 @@ database.connect().then(db =>{
     let users = require('./routes/users');
     let posts = require('./routes/posts');
     let trayek = require('./routes/trayek');
+    let userv2 = require('./routes/users_v2');
     app.use('/', index);
     app.use('/users', users);
     app.use('/posts', posts);
     app.use('/trayek', trayek);
+    app.use('/api/v2/users', userv2);
 
     /** if route not found**/
     app.use((req, res) => {
