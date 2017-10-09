@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model_v2.js" afterPath="$PROJECT_DIR$/models/user_model_v2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users_v2.js" afterPath="$PROJECT_DIR$/routes/users_v2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/utilities/profile_utils.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
-              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="219" />
+              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="219" />
               <folding />
             </state>
           </provider>
@@ -72,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/models/user_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="65" column="45" lean-forward="true" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
+              <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
               <folding>
                 <element signature="e#8300#10261#0" expanded="false" />
                 <element signature="e#10961#12750#0" expanded="false" />
@@ -230,6 +228,159 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/webstorm proj/Semut-SVC" />
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/package.json</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/1.A.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/1.B.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/10.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/11.A.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/11.B.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/12.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/13.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/14.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/15.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/16.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/17.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/18.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/19.A.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/19.B.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/2.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/20.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/21.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/22.A.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/22.B.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/23.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/24.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/25.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/26.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/27.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/28.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/29.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/3.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/30.A.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/30.B.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/31.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/32.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/33.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/34.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/35.A.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/35.B.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/36.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/4.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/5.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/6.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/7.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/8.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/JSONAngkot/9.json</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -290,14 +441,7 @@
       <workItem from="1504795634108" duration="13000" />
       <workItem from="1507217708803" duration="7825000" />
       <workItem from="1507301071061" duration="9794000" />
-      <workItem from="1507507238840" duration="8785000" />
-    </task>
-    <task id="LOCAL-00026" summary="update location query">
-      <created>1502719818180</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1502719818180</updated>
+      <workItem from="1507507238840" duration="8869000" />
     </task>
     <task id="LOCAL-00027" summary="update location query">
       <created>1502719935374</created>
@@ -635,11 +779,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507512219522</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="token status, logout">
+      <created>1507533660465</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1507533660465</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109208000" />
+    <option name="totallyTimeSpent" value="109292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -690,7 +841,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix invalid session post" />
     <MESSAGE value="post date with machine time" />
     <MESSAGE value="fix post query by date" />
     <MESSAGE value="convert isodate to str" />
@@ -715,7 +865,8 @@
     <MESSAGE value="kick axios, replace with requisition" />
     <MESSAGE value="init constant" />
     <MESSAGE value="request body checker" />
-    <option name="LAST_COMMIT_MESSAGE" value="request body checker" />
+    <MESSAGE value="token status, logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="token status, logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1037,7 +1188,7 @@
     <entry file="file://$PROJECT_DIR$/utilities/profile_utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="219" />
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="219" />
           <folding />
         </state>
       </provider>
@@ -1061,7 +1212,7 @@
     <entry file="file://$PROJECT_DIR$/models/user_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="65" column="45" lean-forward="true" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
+          <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
           <folding>
             <element signature="e#8300#10261#0" expanded="false" />
             <element signature="e#10961#12750#0" expanded="false" />
