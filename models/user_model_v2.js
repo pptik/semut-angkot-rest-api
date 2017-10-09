@@ -46,13 +46,14 @@ loginv2 = (query) => {
           switch (strategy){
               case AVAILABLE_STRATEGIES.FACEBOOK:
                   console.log(strategy);
-                  tokenResult = await requisition('https://graph.facebook.com/app?access_token='+query['Token']);
+                  tokenResult = await requisition('https://graph.facebook.com/me?access_token='+query['Token']);
                   tokenResult = await tokenResult.json();
                   //console.log(tokenResult);
                   invalid = (tokenResult.hasOwnProperty('error'));
-                  if(!invalid) userPropic = profileUtils.facebookProfic(query['id']);
+                  if(!invalid) userPropic = profileUtils.facebookProfic(tokenResult['id']);
                   break;
               case AVAILABLE_STRATEGIES.GOOGLE:
+                  /* gplus api not store access_token */
                   tokenResult = await profileUtils.validateGoogleToken(query['Token']);
                   tokenResult = JSON.stringify(tokenResult);
                   console.log(tokenResult);

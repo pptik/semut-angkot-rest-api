@@ -1,7 +1,7 @@
 const axios = require('axios');
 const GoogleAuth = require('google-auth-library');
 const auth = new GoogleAuth;
-const CLIENT_ID = "537771519476-7osna52mqnulnvmt8iska61l7ps9vrul.apps.googleusercontent.com";
+const CLIENT_ID = "537771519476-h61pumjn47kuvilukeq92ps47nsrdl6i.apps.googleusercontent.com";
 
 facebookProfic = (id) =>{
   return "https://graph.facebook.com/"+id+"/picture?type=large"
@@ -12,9 +12,12 @@ facebookProfic = (id) =>{
 
 validateGoogleToken = (token) =>{
     return new Promise((resolve, reject) =>{
-        let client = new auth.OAuth2(CLIENT_ID, '', '');
+        let client = new auth.OAuth2(CLIENT_ID, 'NZIUCSGxViYcYM2yg-ssyHjE', '');
         client.verifyIdToken(token, CLIENT_ID,(e, login) => {
-            if(e) resolve({failed: true, reason: e});
+            if(e) {
+                console.log(e);
+                resolve({failed: true, reason: e});
+            }
             else {
                 resolve(login);
             }
