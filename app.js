@@ -79,12 +79,16 @@ database.connect().then(db =>{
     let trayek = require('./routes/trayek');
     let userv2 = require('./routes/users_v2');
     let cctv = require('./routes/cctv');
+    let postv2 = require('./routes/post_v2');
+
     app.use('/', index);
     app.use('/users', users);
     app.use('/posts', posts);
     app.use('/trayek', trayek);
     app.use('/api/v2/users', userv2);
     app.use('/api/v2/cctv', cctv);
+    app.use('/api/v2/post', postv2);
+
 
     /** if route not found**/
     app.use((req, res) => {

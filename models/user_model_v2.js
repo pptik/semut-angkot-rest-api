@@ -93,6 +93,23 @@ checkToken = async(token) =>{
   });
 };
 
+
+getProfile = async(userID) =>{
+    return new Promise(async (resolve, reject) =>{
+        try {
+            let resp = await userCollection.find({
+                "Version" : 2,
+                "_id": userID
+            }).toArray();
+            if(resp.length > 0){
+                resolve(resp[0]);
+            }else resolve(false);
+        }catch (err){
+            reject(err);
+        }
+    });
+};
+
 /** logout **/
 logout = async(token) =>{
   return new Promise(async(resolve, reject) =>{
@@ -170,5 +187,6 @@ module.exports = {
     insertUserV2:insertUserV2,
     loginv2:loginv2,
     checkToken:checkToken,
-    logout:logout
+    logout:logout,
+    getProfile:getProfile
 };
