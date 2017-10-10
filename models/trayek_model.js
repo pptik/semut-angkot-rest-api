@@ -3,6 +3,7 @@ const moment = require('moment');
 let database = app.db;
 let trayekCollection = database.collection('tb_angkot_trayek');
 let penumpangCollection = database.collection('tb_angkot_penumpang');
+let trayekPathCollection = database.collection('tb_angkot_trayek_bandung_test');
 
 /** tambah penumpang **/
 tambahPenumpang = (query) => {
@@ -20,6 +21,18 @@ tambahPenumpang = (query) => {
                 }
             );
             resolve(result);
+        }catch (err){
+            reject(err);
+        }
+    });
+};
+
+
+getTryekPath = async() =>{
+    return new Promise(async(resolve, reject) => {
+        try{
+            let path = await trayekPathCollection.find({}).toArray();
+            resolve(path);
         }catch (err){
             reject(err);
         }
@@ -87,5 +100,6 @@ getTrayek = () =>{
 module.exports = {
     tambahPenumpang:tambahPenumpang,
     getPenumpang:getPenumpang,
-    getTrayek:getTrayek
+    getTrayek:getTrayek,
+    getTryekPath:getTryekPath
 };

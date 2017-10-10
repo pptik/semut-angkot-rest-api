@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/cctv_model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/cctv.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/trayek_model.js" afterPath="$PROJECT_DIR$/models/trayek_model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users_v2.js" afterPath="$PROJECT_DIR$/routes/users_v2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,51 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="user_model_v2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
+      <file leaf-file-name="trayek_model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="52" />
+            <state relative-caret-position="621">
+              <caret line="103" column="29" lean-forward="false" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cctv_model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/cctv_model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cctv.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/cctv.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+            <state relative-caret-position="421">
+              <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -108,7 +77,6 @@
         <option value="$PROJECT_DIR$/routes/posts.js" />
         <option value="$PROJECT_DIR$/models/post_model.js" />
         <option value="$PROJECT_DIR$/rmq/broadcaster.js" />
-        <option value="$PROJECT_DIR$/models/trayek_model.js" />
         <option value="$PROJECT_DIR$/models/penumpang_model.js" />
         <option value="$PROJECT_DIR$/routes/trayek.js" />
         <option value="$PROJECT_DIR$/models/user_model.js" />
@@ -117,10 +85,11 @@
         <option value="$PROJECT_DIR$/utilities/profile_utils.js" />
         <option value="$PROJECT_DIR$/utilities/body_checker.js" />
         <option value="$PROJECT_DIR$/models/user_model_v2.js" />
-        <option value="$PROJECT_DIR$/routes/users_v2.js" />
         <option value="$PROJECT_DIR$/models/cctv_model.js" />
         <option value="$PROJECT_DIR$/routes/cctv.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/models/trayek_model.js" />
+        <option value="$PROJECT_DIR$/routes/users_v2.js" />
       </list>
     </option>
   </component>
@@ -204,8 +173,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,14 +250,8 @@
       <workItem from="1507217708803" duration="7825000" />
       <workItem from="1507301071061" duration="9794000" />
       <workItem from="1507507238840" duration="11393000" />
-      <workItem from="1507617146228" duration="653000" />
-    </task>
-    <task id="LOCAL-00029" summary="post model">
-      <created>1502721911075</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1502721911075</updated>
+      <workItem from="1507617146228" duration="708000" />
+      <workItem from="1507646099551" duration="503000" />
     </task>
     <task id="LOCAL-00030" summary="date converter">
       <created>1502722590383</created>
@@ -626,11 +589,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507548861058</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="get cctv bandung">
+      <created>1507617813126</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1507617813126</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112469000" />
+    <option name="totallyTimeSpent" value="113027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -681,7 +651,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix post query by date" />
     <MESSAGE value="convert isodate to str" />
     <MESSAGE value="trayek routes" />
     <MESSAGE value="tambah jumlah penumpang" />
@@ -706,7 +675,8 @@
     <MESSAGE value="request body checker" />
     <MESSAGE value="token status, logout" />
     <MESSAGE value="fix resp status" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix resp status" />
+    <MESSAGE value="get cctv bandung" />
+    <option name="LAST_COMMIT_MESSAGE" value="get cctv bandung" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -945,20 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/trayek.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="64" column="118" lean-forward="false" selection-start-line="64" selection-start-column="118" selection-end-line="64" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/penumpang_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -999,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="219" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,10 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1625">
           <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
-          <folding>
-            <element signature="e#8300#10261#0" expanded="false" />
-            <element signature="e#10961#12750#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1033,30 +983,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/cctv_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="57" />
+        <state relative-caret-position="553">
+          <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1069,10 +1002,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/models/cctv_model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+        <state relative-caret-position="500">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/trayek.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="64" column="118" lean-forward="false" selection-start-line="64" selection-start-column="118" selection-end-line="64" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/trayek_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="103" column="29" lean-forward="false" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
           <folding />
         </state>
       </provider>

@@ -40,6 +40,27 @@ router.post('/status', async(req, res) =>{
 });
 
 
+router.post('/path', async(req, res) =>{
+    if(bodyChecker.check(['Token'], req.body)){
+        try {
+            let status = await userModel.checkToken(req.body['Token']);
+            if (status === false) res.status(200).send(commonMessage.session_invalid);
+            else {
+                let pathModel = require('../models/trayek_model');
+                let path = await pathModel.getTryekPath();
+                res.status(200).send({
+                    success: true,
+                    message: "berhasil memuat permintaan",
+                    code: "000",
+                    data : path
+                });
+            }
+        }catch (err) {
+            res.status(200).send(commonMessage.service_not_responding);
+        }
+    }else res.status(200).send(commonMessage.body_body_empty);
+});
+
 router.post('/logout', async(req, res) =>{
     if(bodyChecker.check(['Token'], req.body)){
         try {
