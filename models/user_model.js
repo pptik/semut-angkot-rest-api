@@ -3,6 +3,7 @@ const moment = require('moment');
 let database = app.db;
 let userCollection = database.collection('tb_user');
 let sessionCollection = database.collection('tb_session');
+let angkotHistory = database.collection('tb_angkot_history');
 const autoIncrement = require("mongodb-autoincrement");
 const md5 = require('md5');
 const converter = require('../utilities/converter');
@@ -104,6 +105,7 @@ updateUserLocation = (query) => {
           {
               'Angkot.location.coordinates' : [query['longitude'], query['latitude']],
               'Angkot.JumlahPenumpang' : query['jumlah_penumpang'],
+			  'Angkot.Speed': query['speed'],
               //'Angkot.LastUpdate' : new Date(query['time'])
               'Angkot.LastUpdate' : new Date()
               /*Angkot : {
@@ -120,6 +122,14 @@ updateUserLocation = (query) => {
           if(err){
               reject(err);
           }else {
+			 sessionCollection.insertOne(_query, (err, result) => {
+                            if (err) reject(err);
+                            else resolve(result);
+                        }
+			 angkotHistory.insertOne(query, (err, result)) => {
+				if(err) reject(err);
+				//else resolve();
+			 }
              resolve(result);
           }
       });
