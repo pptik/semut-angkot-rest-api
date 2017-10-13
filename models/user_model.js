@@ -131,7 +131,6 @@ updateUserLocation = (query) => {
 				'JumlahPenumpang' : query['jumlah_penumpang'],
 				'LastUpdate' : new Date()
 			}, (err, result) => {
-				console.log(result);
 				if(err) reject(err);
 				resolve(result);
 			});
