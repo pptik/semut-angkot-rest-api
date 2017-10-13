@@ -121,16 +121,20 @@ updateUserLocation = (query) => {
       }, (err, result) => {
 		  if(err){
               reject(err);
-          }else {
-			 angkotHistory.insertOne({
-				'location.coordinates' : [query['longitude'], query['latitude']],
+          }else {			
+			angkotHistory.insertOne({
+				'location' : {
+					'type': 'Point',
+					'coordinates' : [query['longitude'], query['latitude']]
+					},
 				'Speed' : query['speed'],
 				'JumlahPenumpang' : query['jumlah_penumpang'],
 				'LastUpdate' : new Date()
-			 }, (err, res) => {
+			}, (err, result) => {
+				console.log(result);
 				if(err) reject(err);
-			 });
-             resolve(result);
+				resolve(result);
+			});
           }
       });
   });
