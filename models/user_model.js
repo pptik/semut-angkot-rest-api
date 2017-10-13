@@ -118,17 +118,17 @@ updateUserLocation = (query) => {
                   JumlahPenumpang: query['jumlah_penumpang']
               }*/
           }
-      }, function(err, result) {
+      }, (err, result) => {
           if(err){
               reject(err);
           }else {
-			 sessionCollection.insertOne(_query, (err, result) => {
-                            if (err) reject(err);
-                            else resolve(result);
-                        }
-			 angkotHistory.insertOne(query, (err, result)) => {
+			 angkotHistory.insertOne({
+				'location.coordinates' : [query['longitude'], query['latitude']],
+				'Speed' : query[]
+				'JumlahPenumpang' : query['jumlah_penumpang'],
+				'LastUpdate' : new Date()
+			 }, (err, res)) => {
 				if(err) reject(err);
-				//else resolve();
 			 }
              resolve(result);
           }
