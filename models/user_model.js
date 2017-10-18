@@ -130,7 +130,8 @@ updateUserLocation = (query) => {
 				'Speed' : query['speed'],
 				'JumlahPenumpang' : query['jumlah_penumpang'],
 				'LastUpdate' : new Date(),
-				'SessionID' : query['session_id']
+				'SessionID' : query['session_id'],
+				'ID' : query['ID']
 			}, (err, result) => {
 				if(err) reject(err);
 				resolve(result);
