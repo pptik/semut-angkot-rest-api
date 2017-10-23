@@ -9,7 +9,7 @@ connect = async() => {
         let connection = await rmq.connect(rmq_config.broker_uri);
         await consume(connection);
         await broadcaster.broadcastAngkot(connection);
-    }catch (er){
+    }catch (err){
         console.log(err);
     }
 };
