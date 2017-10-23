@@ -27,12 +27,13 @@ async function main(){
 async function updateUserLocation(dbconn, query){
     let userCollection = dbconn.collection('tb_user');
     let angkotHistory = dbconn.collection('tb_angkot_history');
+    //console.log("param: "+JSON.stringify(query));
     return new Promise((resolve, reject) =>{
             userCollection.updateOne({ID: query['ID']},{ $set:
             {
-                'Angkot.location.coordinates' : [query['longitude'], query['latitude']],
+                'Angkot.location.coordinates' : [query['data'][1], query['data'][0]],
                 'Angkot.JumlahPenumpang' : 0,
-                'Angkot.Speed': query['speed'],
+                'Angkot.Speed': query['Speed'],
                 //'Angkot.LastUpdate' : new Date(query['time'])
                 'Angkot.LastUpdate' : new Date()
                 /*Angkot : {
@@ -52,9 +53,9 @@ async function updateUserLocation(dbconn, query){
                 angkotHistory.insertOne({
                     'location' : {
                         'type': 'Point',
-                        'coordinates' : [query['longitude'], query['latitude']]
+                        'coordinates' : [query['data'][1], query['data'][0]]
                         },
-                    'Speed' : query['speed'],
+                    'Speed' : query['Speed'],
                     'JumlahPenumpang' : 0,
                     'LastUpdate' : new Date(),
                     'ID' : query['ID']
