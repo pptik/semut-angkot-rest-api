@@ -14,8 +14,8 @@ broadcastAngkot = async(connection) => {
             let test = {test : "test"}.toString();
             let dataAngkot = await userModel.getAngkotLocation();
           //  let dataPost = await postModel.getPosts();
-            let dataTmd = await tmdModels.getTmbLocation();
-            let msg = {angkot : dataAngkot, laporan : [], tmd: dataTmd};
+            let dataTmb = await tmdModels.getTmbLocation();
+            let msg = {angkot : dataAngkot, laporan : [], tmd: dataTmb};
             msg = JSON.stringify(msg);
             await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(msg));
         }, 1500);
