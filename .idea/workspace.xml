@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/rmq/broadcaster.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+              <caret line="10" column="100" lean-forward="false" selection-start-line="10" selection-start-column="100" selection-end-line="10" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -278,14 +278,7 @@
       <workItem from="1507703824018" duration="4000" />
       <workItem from="1508059552595" duration="16000" />
       <workItem from="1511245801020" duration="4626000" />
-      <workItem from="1511260499735" duration="237000" />
-    </task>
-    <task id="LOCAL-00036" summary="session checker">
-      <created>1502728654707</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1502728654707</updated>
+      <workItem from="1511260499735" duration="855000" />
     </task>
     <task id="LOCAL-00037" summary="fix typo">
       <created>1502728682429</created>
@@ -623,11 +616,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511260672997</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="revert msg ttl">
+      <created>1511260748283</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1511260748283</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118903000" />
+    <option name="totallyTimeSpent" value="119521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -678,7 +678,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get penumpang routes" />
     <MESSAGE value="change array to json obj" />
     <MESSAGE value="get angkot ok" />
     <MESSAGE value="move to penumpang collection" />
@@ -703,7 +702,8 @@
     <MESSAGE value="add tmd to broadcast" />
     <MESSAGE value="fix typo" />
     <MESSAGE value="return converted time" />
-    <option name="LAST_COMMIT_MESSAGE" value="return converted time" />
+    <MESSAGE value="revert msg ttl" />
+    <option name="LAST_COMMIT_MESSAGE" value="revert msg ttl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1060,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/rmq/broadcaster.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="99" selection-end-line="10" selection-end-column="99" />
+          <caret line="10" column="100" lean-forward="false" selection-start-line="10" selection-start-column="100" selection-end-line="10" selection-end-column="100" />
           <folding />
         </state>
       </provider>
