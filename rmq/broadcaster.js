@@ -1,5 +1,5 @@
 const userModel = require('../models/user_model');
-const postModel = require('../models/post_model');
+const tmdModels = require('../models/tmb_model');
 const configs = require('../configs/rmq.json');
 
 /** broadcast lokasi angkot **/
@@ -13,8 +13,9 @@ broadcastAngkot = async(connection) => {
         setInterval(async function () {
             let test = {test : "test"}.toString();
             let dataAngkot = await userModel.getAngkotLocation();
-            let dataPost = await postModel.getPosts();
-            let msg = {angkot : dataAngkot, laporan : dataPost};
+          //  let dataPost = await postModel.getPosts();
+            let dataTmd = await tmdModels.getTmbLocation();
+            let msg = {angkot : dataAngkot, laporan : [], tmd: dataTmd};
             msg = JSON.stringify(msg);
             await ch.publish(configs.exchange_name, configs.broadcast_route, new Buffer(msg));
         }, 1500);
