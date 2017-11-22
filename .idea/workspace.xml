@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
+    <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="update lokasi user">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rmq/connection.js" afterPath="$PROJECT_DIR$/rmq/connection.js" />
     </list>
@@ -30,8 +30,8 @@
       <file leaf-file-name="connection.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rmq/connection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+            <state relative-caret-position="266">
+              <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -40,8 +40,8 @@
       <file leaf-file-name="rmq.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/rmq.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -271,14 +271,7 @@
       <workItem from="1508059552595" duration="16000" />
       <workItem from="1511245801020" duration="4626000" />
       <workItem from="1511260499735" duration="3316000" />
-      <workItem from="1511329713378" duration="2935000" />
-    </task>
-    <task id="LOCAL-00040" summary="fix queries">
-      <created>1502775879293</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1502775879293</updated>
+      <workItem from="1511329713378" duration="4391000" />
     </task>
     <task id="LOCAL-00041" summary="header problem">
       <created>1502777048052</created>
@@ -616,11 +609,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511330458692</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="update lokasi user">
+      <created>1511339987590</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1511339987590</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124917000" />
+    <option name="totallyTimeSpent" value="126373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -671,7 +671,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move to penumpang collection" />
     <MESSAGE value="parse body request to int" />
     <MESSAGE value="get penumpang 30 minutes ago" />
     <MESSAGE value="update jumlah penumpang" />
@@ -696,7 +695,8 @@
     <MESSAGE value="revert msg ttl" />
     <MESSAGE value="change ttl" />
     <MESSAGE value="public trans" />
-    <option name="LAST_COMMIT_MESSAGE" value="public trans" />
+    <MESSAGE value="update lokasi user" />
+    <option name="LAST_COMMIT_MESSAGE" value="update lokasi user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1122,16 +1122,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/rmq.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rmq/connection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        <state relative-caret-position="266">
+          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
           <folding />
         </state>
       </provider>

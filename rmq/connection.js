@@ -21,6 +21,7 @@ consume = async (connection) => {
         let channel = await connection.createChannel();
         await channel.assertExchange(rmq_config.exchange_name, 'topic', {durable : false});
         let q = await channel.assertQueue(rmq_config.service_queue_name, {exclusive : false});
+        //Todo : service_queue_name binding -> x-angkot & x-general | 22/11/2017
         await channel.bindQueue(q.queue, rmq_config.exchange_name, rmq_config.service_route);
         channel.consume(q.queue, (msg) => {
             console.log("=================================================");
