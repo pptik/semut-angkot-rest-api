@@ -37,6 +37,13 @@ consume = async (connection) => {
                    console("process failed : "+JSON.stringify(err));
                 });
             }
+            else if(msg.fields.routingKey === rmq_config.route_update_user){
+                let query = JSON.parse(msg.content.toString());
+                console.log("-------------------------------------------------");
+                console.log('UPDATE LOKASI USER');
+                console.log("-------------------------------------------------");
+                console.log(query);
+            }
         }, {noAck: true});
         console.log("Service consume on : "+rmq_config.service_route);
     }catch(err) {
