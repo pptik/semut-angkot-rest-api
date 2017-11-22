@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="update lokasi user">
+    <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user_model_v2.js" afterPath="$PROJECT_DIR$/models/user_model_v2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rmq/connection.js" afterPath="$PROJECT_DIR$/rmq/connection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users_v2.js" afterPath="$PROJECT_DIR$/routes/users_v2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rmq/users.js">
+      <file leaf-file-name="user_model_v2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="449">
+              <caret line="111" column="40" lean-forward="false" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user_model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="105" column="14" lean-forward="false" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -30,8 +42,8 @@
       <file leaf-file-name="connection.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rmq/connection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
+            <state relative-caret-position="550">
+              <caret line="49" column="69" lean-forward="false" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -42,6 +54,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -94,8 +116,6 @@
         <option value="$PROJECT_DIR$/models/cctv_model.js" />
         <option value="$PROJECT_DIR$/routes/cctv.js" />
         <option value="$PROJECT_DIR$/models/trayek_model.js" />
-        <option value="$PROJECT_DIR$/routes/users_v2.js" />
-        <option value="$PROJECT_DIR$/models/user_model_v2.js" />
         <option value="$PROJECT_DIR$/routes/post_v2.js" />
         <option value="$PROJECT_DIR$/models/tmb_model.js" />
         <option value="$PROJECT_DIR$/rmq/broadcaster.js" />
@@ -103,6 +123,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/public_trans.js" />
         <option value="$PROJECT_DIR$/configs/rmq.json" />
+        <option value="$PROJECT_DIR$/routes/users_v2.js" />
+        <option value="$PROJECT_DIR$/models/user_model_v2.js" />
         <option value="$PROJECT_DIR$/rmq/connection.js" />
       </list>
     </option>
@@ -271,14 +293,7 @@
       <workItem from="1508059552595" duration="16000" />
       <workItem from="1511245801020" duration="4626000" />
       <workItem from="1511260499735" duration="3316000" />
-      <workItem from="1511329713378" duration="4391000" />
-    </task>
-    <task id="LOCAL-00041" summary="header problem">
-      <created>1502777048052</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1502777048052</updated>
+      <workItem from="1511329713378" duration="7272000" />
     </task>
     <task id="LOCAL-00042" summary="add cors options">
       <created>1502777650484</created>
@@ -616,11 +631,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511339987590</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="add todo">
+      <created>1511341447471</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1511341447472</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126373000" />
+    <option name="totallyTimeSpent" value="129254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -671,7 +693,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="parse body request to int" />
     <MESSAGE value="get penumpang 30 minutes ago" />
     <MESSAGE value="update jumlah penumpang" />
     <MESSAGE value="check status penumpang" />
@@ -696,7 +717,8 @@
     <MESSAGE value="change ttl" />
     <MESSAGE value="public trans" />
     <MESSAGE value="update lokasi user" />
-    <option name="LAST_COMMIT_MESSAGE" value="update lokasi user" />
+    <MESSAGE value="add todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add todo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -988,102 +1010,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="52" />
-          <folding>
-            <marker date="1511330365100" expanded="true" signature="3746:5081" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="3790:5077" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="3841:4161" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="3859:4161" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="4949:4978" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="4949:5063" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="4949:5071" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="4997:5049" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5085:5106" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="5134:5489" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5179:5485" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5299:5477" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5492:5518" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="5545:6329" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5591:6325" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5699:5972" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="5723:5970" ph="[...]" />
-            <marker date="1511330365100" expanded="true" signature="6012:6317" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6061:6307" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6117:6261" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6333:6363" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="6367:6397" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="6433:7250" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6478:7246" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6598:7238" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6682:7209" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6797:7189" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="6909:7165" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="7254:7282" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="7324:7589" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="7370:7585" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="7593:7618" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="7648:8755" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="7693:8751" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="7809:8743" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="7893:8714" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="8760:8778" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="8803:10764" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="8848:10760" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="9196:10752" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="9248:10742" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="9282:10553" ph="{&quot;ID&quot;: autoIndex...}" />
-            <marker date="1511330365100" expanded="true" signature="10624:10726" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="10770:10795" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="10826:13464" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="10871:13460" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="11378:13452" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="11430:13442" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="11464:13253" ph="{&quot;ID&quot;: autoIndex...}" />
-            <marker date="1511330365100" expanded="true" signature="12748:13234" ph="{&quot;PlatNomor&quot;: platNomor...}" />
-            <marker date="1511330365100" expanded="true" signature="12884:13005" ph="{&quot;Nama&quot;: trayek...}" />
-            <marker date="1511330365100" expanded="true" signature="13091:13212" ph="{&quot;type&quot;: &quot;Point&quot;...}" />
-            <marker date="1511330365100" expanded="true" signature="13324:13426" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="13470:13488" ph="/**...*/" />
-            <marker date="1511330365100" expanded="true" signature="13513:15506" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="13558:15502" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="13901:15494" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="13953:15484" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="13987:15295" ph="{&quot;ID&quot;: autoIndex...}" />
-            <marker date="1511330365100" expanded="true" signature="15366:15468" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="15509:15541" ph="/*...*/" />
-            <marker date="1511330365100" expanded="true" signature="15579:16302" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="15624:16298" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="15744:16290" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="15828:16261" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="15943:16241" ph="{...}" />
-            <marker date="1511330365100" expanded="true" signature="16055:16217" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/angkot_model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4600">
-          <caret line="187" column="4" lean-forward="false" selection-start-line="187" selection-start-column="4" selection-end-line="187" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="27" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1112,14 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rmq/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/rmq.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1128,10 +1050,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="105" column="14" lean-forward="false" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rmq/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user_model_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="111" column="40" lean-forward="false" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rmq/connection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" column="80" lean-forward="false" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
+        <state relative-caret-position="550">
+          <caret line="49" column="69" lean-forward="false" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
           <folding />
         </state>
       </provider>

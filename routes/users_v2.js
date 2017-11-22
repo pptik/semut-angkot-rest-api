@@ -24,7 +24,6 @@ router.post('/login', async(req, res) => {
             res.status(200).send(commonMessage.service_not_responding);
         }
     }else res.status(200).send(commonMessage.body_body_empty);
-
 });
 
 router.post('/status', async(req, res) =>{

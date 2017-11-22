@@ -2,6 +2,7 @@ const rmq_config = require('../configs/rmq.json');
 let rmq = require('amqplib');
 const userService = require('./users');
 const broadcaster = require('./broadcaster');
+const userModel = require('../models/user_model_v2');
 
 /** connect to rabbit**/
 connect = async() => {
@@ -43,7 +44,11 @@ consume = async (connection) => {
                 console.log("-------------------------------------------------");
                 console.log('UPDATE LOKASI USER');
                 console.log("-------------------------------------------------");
-                console.log(query);
+                userModel.updateLocation(query).then(result =>{
+                    console.log("Berhasil update lokasi");
+                }).catch(err =>{
+                    console.log("Gagal update lokasi, cause : "+err);
+                })
             }
         }, {noAck: true});
         console.log("Service consume on : "+rmq_config.service_route);

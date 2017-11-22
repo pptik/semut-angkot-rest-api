@@ -2,6 +2,7 @@ const app = require('../app');
 const moment = require('moment');
 let database = app.db;
 let userCollection = database.collection('tb_user');
+let historyCollection = database.collection('tb_user_loc_history');
 let tokenCollection = database.collection('tb_token');
 const md5 = require('md5');
 
@@ -85,13 +86,37 @@ checkToken = async(token) =>{
              "EndTime": "0000-00-00 00:00:00"
          }).toArray();
          if(resp.length > 0){
-             resolve(resp[0]['UserID']);
+             resolve(resp[0]['_id']);
          }else resolve(false);
      }catch (err){
          reject(err);
      }
   });
 };
+
+updateLocation = async(query) => {
+    return new Promise(async(resolve, reject) =>{
+       try {
+           let userId = await checkToken(query['Token']);
+           if(userId === false) console.log("Token Invalid");
+           else {
+               await userCollection.updateOne({"_id": userId},{
+                  $set:{
+                      'Profile.location.coordinates' : [query['Longitude'], query['Latitude']],
+                      'Profile.LastLocationTime' : new Date(query['Time']),
+                      'Profile.Biker' : query['Biker']
+                  }
+               });
+               query['UserID'] = userId;
+               await historyCollection.insertOne(query);
+               resolve({success: true});
+           }
+       }catch (err){
+           reject(err);
+       }
+    });
+};
+
 
 
 getProfile = async(userID) =>{
@@ -188,5 +213,6 @@ module.exports = {
     loginv2:loginv2,
     checkToken:checkToken,
     logout:logout,
-    getProfile:getProfile
+    getProfile:getProfile,
+    updateLocation:updateLocation
 };
