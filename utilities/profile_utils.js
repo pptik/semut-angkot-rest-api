@@ -9,7 +9,9 @@ gplusProfic = async(id) => {
     let endpointUrl = "https://www.googleapis.com/plus/v1/people/"+id+"?fields=image&key="+require('../configs/constants').gplus_api_client;
     let resp = await requisition(endpointUrl);
     resp = await resp.json();
-    return resp['image']['url'].replace('?sz=50','');
+    if(resp.hasOwnProperty("image"))
+        return resp['image']['url'].replace('?sz=50','');
+    else "https://yt3.ggpht.com/-zYTZUmO6ZYA/AAAAAAAAAAI/AAAAAAAAAAA/LZIiQ_d1O54/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"
 };
 
 
