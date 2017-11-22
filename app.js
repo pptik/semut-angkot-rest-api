@@ -81,6 +81,7 @@ database.connect().then(db =>{
     let cctv = require('./routes/cctv');
     let postv2 = require('./routes/post_v2');
     let publicTrans = require('./routes/public_trans');
+    let notif = require('./routes/notif');
 
     app.use('/', index);
     app.use('/users', users);
@@ -90,6 +91,7 @@ database.connect().then(db =>{
     app.use('/api/v2/cctv', cctv);
     app.use('/api/v2/post', postv2);
     app.use('/api/v2/publictrans', publicTrans);
+    app.use('/api/v2/notif', notif);
 
 
     /** if route not found**/
