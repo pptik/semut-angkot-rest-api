@@ -86,7 +86,7 @@ checkToken = async(token) =>{
              "EndTime": "0000-00-00 00:00:00"
          }).toArray();
          if(resp.length > 0){
-             resolve(resp[0]['_id']);
+             resolve(resp[0]['UserID']);
          }else resolve(false);
      }catch (err){
          reject(err);
