@@ -107,7 +107,8 @@ updateUserLocation = (query) => {
               'Angkot.JumlahPenumpang' : query['jumlah_penumpang'],
 			  'Angkot.Speed': query['speed'],
               //'Angkot.LastUpdate' : new Date(query['time'])
-              'Angkot.LastUpdate' : new Date()
+              'Angkot.LastUpdate' : new Date(),
+			  'Angkot.TypeTrip' : query['status_online']
               /*Angkot : {
                   location:
                       {
@@ -130,6 +131,7 @@ updateUserLocation = (query) => {
 				'Speed' : query['speed'],
 				'JumlahPenumpang' : query['jumlah_penumpang'],
 				'LastUpdate' : new Date(),
+				'TypeTrip' : query['status_online'],
 				'ID' : query['ID']
 			}, (err, result) => {
 				if(err) reject(err);
