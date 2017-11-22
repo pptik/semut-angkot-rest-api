@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router();
 const angkotModel = require('../models/angkot_model');
 const commonMsg = require('../configs/common_messages.json');
 const bodyChecker = require('../utilities/body_checker');
