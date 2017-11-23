@@ -11,7 +11,7 @@ gplusProfic = async(id) => {
     resp = await resp.json();
     if(resp.hasOwnProperty("image"))
         return resp['image']['url'].replace('?sz=50','');
-    else "https://yt3.ggpht.com/-zYTZUmO6ZYA/AAAAAAAAAAI/AAAAAAAAAAA/LZIiQ_d1O54/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"
+    else return "https://yt3.ggpht.com/-zYTZUmO6ZYA/AAAAAAAAAAI/AAAAAAAAAAA/LZIiQ_d1O54/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"
 };
 
 
