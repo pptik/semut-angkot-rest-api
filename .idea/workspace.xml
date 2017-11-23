@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/bike_model.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/bike.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utilities/profile_utils.js" afterPath="$PROJECT_DIR$/utilities/profile_utils.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,17 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="cctv_model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/cctv_model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bike_model.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bike_model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/bike_model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="650">
@@ -38,11 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_model.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user_model.js">
+      <file leaf-file-name="bike.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/bike.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="163" column="12" lean-forward="true" selection-start-line="163" selection-start-column="12" selection-end-line="169" selection-end-column="19" />
+            <state relative-caret-position="450">
+              <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cctv.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/cctv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -108,6 +107,7 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/utilities/profile_utils.js" />
         <option value="$PROJECT_DIR$/models/bike_model.js" />
+        <option value="$PROJECT_DIR$/routes/bike.js" />
       </list>
     </option>
   </component>
@@ -276,14 +276,7 @@
       <workItem from="1511245801020" duration="4626000" />
       <workItem from="1511260499735" duration="3316000" />
       <workItem from="1511329713378" duration="10742000" />
-      <workItem from="1511465826486" duration="480000" />
-    </task>
-    <task id="LOCAL-00046" summary="convert iso date to string">
-      <created>1502782576921</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1502782576921</updated>
+      <workItem from="1511465826486" duration="575000" />
     </task>
     <task id="LOCAL-00047" summary="fix invalid session post">
       <created>1502815302922</created>
@@ -621,11 +614,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511351496707</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="bike model">
+      <created>1511466318950</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1511466318951</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133204000" />
+    <option name="totallyTimeSpent" value="133299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -676,7 +676,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="angkot query by day" />
     <MESSAGE value="fix angkot query by day" />
     <MESSAGE value="fix angkot time" />
     <MESSAGE value="modular user mgmnt" />
@@ -701,20 +700,14 @@
     <MESSAGE value="fix token" />
     <MESSAGE value="flash notif" />
     <MESSAGE value="fix gplus return no image" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix gplus return no image" />
+    <MESSAGE value="bike model" />
+    <option name="LAST_COMMIT_MESSAGE" value="bike model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/common_messages.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
@@ -926,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/cctv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rmq/broadcaster.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1064,6 +1050,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
           <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/cctv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/bike.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding />
         </state>
       </provider>
