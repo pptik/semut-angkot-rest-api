@@ -82,6 +82,7 @@ database.connect().then(db =>{
     let postv2 = require('./routes/post_v2');
     let publicTrans = require('./routes/public_trans');
     let notif = require('./routes/notif');
+    let bike = require('./routes/bike');
 
     app.use('/', index);
     app.use('/users', users);
@@ -92,6 +93,7 @@ database.connect().then(db =>{
     app.use('/api/v2/post', postv2);
     app.use('/api/v2/publictrans', publicTrans);
     app.use('/api/v2/notif', notif);
+    app.use('/api/v2/bike', bike);
 
 
     /** if route not found**/
