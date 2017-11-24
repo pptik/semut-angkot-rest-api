@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7428110-35d4-43f6-84b2-05ab6cb7924b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users_v2.js" afterPath="$PROJECT_DIR$/routes/users_v2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="696">
@@ -47,10 +47,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="users_v2.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cctv.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/cctv.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
+            <state relative-caret-position="750">
               <caret line="30" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="24" />
               <folding />
             </state>
@@ -109,7 +119,6 @@
         <option value="$PROJECT_DIR$/models/angkot_model.js" />
         <option value="$PROJECT_DIR$/routes/public_trans.js" />
         <option value="$PROJECT_DIR$/configs/rmq.json" />
-        <option value="$PROJECT_DIR$/routes/users_v2.js" />
         <option value="$PROJECT_DIR$/rmq/connection.js" />
         <option value="$PROJECT_DIR$/models/user_model_v2.js" />
         <option value="$PROJECT_DIR$/models/notif_model.js" />
@@ -118,6 +127,7 @@
         <option value="$PROJECT_DIR$/models/bike_model.js" />
         <option value="$PROJECT_DIR$/routes/bike.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/users_v2.js" />
       </list>
     </option>
   </component>
@@ -286,14 +296,8 @@
       <workItem from="1511245801020" duration="4626000" />
       <workItem from="1511260499735" duration="3316000" />
       <workItem from="1511329713378" duration="10742000" />
-      <workItem from="1511465826486" duration="661000" />
-    </task>
-    <task id="LOCAL-00048" summary="fix invalid session post">
-      <created>1502815431976</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1502815431976</updated>
+      <workItem from="1511465826486" duration="691000" />
+      <workItem from="1511485624326" duration="73000" />
     </task>
     <task id="LOCAL-00049" summary="post date with machine time">
       <created>1502825741161</created>
@@ -631,11 +635,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511466409516</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="add bike to app">
+      <created>1511466498992</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1511466498992</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133385000" />
+    <option name="totallyTimeSpent" value="133488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -686,7 +697,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix angkot time" />
     <MESSAGE value="modular user mgmnt" />
     <MESSAGE value="verify login strategies" />
     <MESSAGE value="kick axios, replace with requisition" />
@@ -711,7 +721,8 @@
     <MESSAGE value="fix gplus return no image" />
     <MESSAGE value="bike model" />
     <MESSAGE value="bike routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bike routes" />
+    <MESSAGE value="add bike to app" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bike to app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -985,18 +996,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/public_trans.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,7 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="163" column="12" lean-forward="true" selection-start-line="163" selection-start-column="12" selection-end-line="169" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,7 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/cctv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
+        <state relative-caret-position="750">
           <caret line="30" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="24" />
           <folding />
         </state>
@@ -1076,6 +1073,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="95" column="34" lean-forward="false" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users_v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding />
         </state>
       </provider>

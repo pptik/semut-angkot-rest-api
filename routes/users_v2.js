@@ -33,6 +33,7 @@ router.post('/status', async(req, res) =>{
            if (status === false) res.status(200).send(commonMessage.session_invalid);
            else res.status(200).send({success: true, code: "000", message: "Token status valid"});
        }catch (err) {
+           console.log(err);
            res.status(200).send(commonMessage.service_not_responding);
        }
    }else res.status(200).send(commonMessage.body_body_empty);
@@ -55,6 +56,7 @@ router.post('/path', async(req, res) =>{
                 });
             }
         }catch (err) {
+            console.log(err);
             res.status(200).send(commonMessage.service_not_responding);
         }
     }else res.status(200).send(commonMessage.body_body_empty);
