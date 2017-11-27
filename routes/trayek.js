@@ -101,7 +101,7 @@ router.post('/get-penumpang', async(req, res) => {
 
 
 
-router.post('/get-trayek', async(req, res) => {
+router.get('/get-trayek', async(req, res) => {
     try {
         let trayek = await trayekModel.getTrayek();
         res.status(200).send(
