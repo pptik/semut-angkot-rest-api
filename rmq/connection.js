@@ -27,6 +27,7 @@ consume = async (connection) => {
         channel.consume(q.queue, (msg) => {
             console.log("=================================================");
             console.log("Incoming msg : "+msg.content.toString());
+			let startTime = new Date().getTime();
             /** update angkot location**/
             if(msg.fields.routingKey === rmq_config.route_update_angkot){
                 let query = JSON.parse(msg.content.toString());
@@ -35,8 +36,12 @@ consume = async (connection) => {
                 console.log("-------------------------------------------------");
                 userService.updateUserLocation(query).then(result =>{
                     console.log("process success : "+JSON.stringify(result));
+					let endTime = new Date().getTime();
+					console.log("duration [ms] = " + (endTime-startTime));
                 }).catch(err =>{
                    console("process failed : "+JSON.stringify(err));
+				   let endTime = new Date().getTime();
+				   console.log("duration [ms] = " + (endTime-startTime));
                 });
             }
             else if(msg.fields.routingKey === rmq_config.route_update_user){
@@ -46,8 +51,12 @@ consume = async (connection) => {
                 console.log("-------------------------------------------------");
                 userModel.updateLocation(query).then(result =>{
                     console.log("Berhasil update lokasi");
+					let endTime = new Date().getTime();
+					console.log("duration [ms] = " + (endTime-startTime));
                 }).catch(err =>{
                     console.log("Gagal update lokasi, cause : "+err);
+					let endTime = new Date().getTime();
+					console.log("duration [ms] = " + (endTime-startTime));
                 })
             }
         }, {noAck: true});
