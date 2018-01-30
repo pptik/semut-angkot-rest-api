@@ -27,5 +27,30 @@ router.post('/angkot', async(req, res) => {
     }
 });
 
+router.get('/angkotTracker', async(req, res) => {
+    //let query = req.body;
+    //let bodyComplete = bodyChecker.check(['Token'], req.body);
+    //if(!bodyComplete){
+    //    res.status(200).send(commonMsg.body_body_empty);
+    //}
+	//else 
+	//{
+        try{
+            //let profile = await userModel.checkToken(query['Token']);
+            //if(profile === null) res.status(200).send(commonMsg.session_invalid);
+            //else 
+			//{
+                //let data = await angkotModel.getAngkot();
+				let data = await angkotModel.getAngkotTracker();
+                let response = {success:true, code: '0000', message: "berhasil memuat data", data:data};
+                res.status(200).send(response);
+            //}
+        }catch (err){
+            console.log(err);
+            res.status(200).send(commonMsg.service_not_responding);
+        }
+    //}
+});
+
 
 module.exports = router;
